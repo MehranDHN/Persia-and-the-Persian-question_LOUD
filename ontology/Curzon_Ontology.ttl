@@ -9,84 +9,42 @@
 
 mdhn:Ontology a owl:Ontology ;
     rdfs:label "Unified Ontology & Knowledge Graph of Qajar Persia and the Persian Constitutional Era (1887-1912)"@en ;
-    dcterms:description "A multi-source RDF ontology integrating historical entities, events, spatial landmarks, documents, and factions across three primary sources: Browne (1893/1926), Browne (1910), and Shuster (1912)."@en ;
+    dcterms:description "A multi-source RDF ontology integrating historical entities, events, spatial landmarks, documents, and factions across three primary sources: Browne (1893/1926), Browne (1910), and Shuster (1912). Extended with extractions from Curzon (1892)."@en ;
     dcterms:created "2026-10-14"^^xsd:date .
 
+# Classes (minimal ontology)
 mdhn:HistoricalPerson a rdfs:Class ; rdfs:label "Historical Person or Agent"@en .
-
 mdhn:Monarch a rdfs:Class ; rdfs:subClassOf mdhn:HistoricalPerson ; rdfs:label "Monarch / Shah"@en .
-
 mdhn:Cleric a rdfs:Class ; rdfs:subClassOf mdhn:HistoricalPerson ; rdfs:label "Cleric / Mujtahid / Ulama"@en .
-
-mdhn:MilitaryLeader a rdfs:Class ;
-    rdfs:subClassOf mdhn:HistoricalPerson ;
-    rdfs:label "Military Officer or Revolutionary Commander"@en .
-
-mdhn:IntellectualOrator a rdfs:Class ;
-    rdfs:subClassOf mdhn:HistoricalPerson ;
-    rdfs:label "Intellectual, Writer, or Parliamentary Orator"@en .
-
-mdhn:FinancialAdministrator a rdfs:Class ;
-    rdfs:subClassOf mdhn:HistoricalPerson ;
-    rdfs:label "Financial Adviser or Administrator"@en .
-
-mdhn:ReligiousLeader a rdfs:Class ;
-    rdfs:subClassOf mdhn:HistoricalPerson ;
-    rdfs:label "Religious Movement / Sectarian Leader"@en .
-
+mdhn:MilitaryLeader a rdfs:Class ; rdfs:subClassOf mdhn:HistoricalPerson ; rdfs:label "Military Officer or Revolutionary Commander"@en .
+mdhn:IntellectualOrator a rdfs:Class ; rdfs:subClassOf mdhn:HistoricalPerson ; rdfs:label "Intellectual, Writer, or Parliamentary Orator"@en .
+mdhn:FinancialAdministrator a rdfs:Class ; rdfs:subClassOf mdhn:HistoricalPerson ; rdfs:label "Financial Adviser or Administrator"@en .
+mdhn:ReligiousLeader a rdfs:Class ; rdfs:subClassOf mdhn:HistoricalPerson ; rdfs:label "Religious Movement / Sectarian Leader"@en .
 mdhn:PoliticalFaction a rdfs:Class ; rdfs:label "Political or Ideological Faction"@en .
-
 mdhn:RevolutionaryEvent a rdfs:Class ; rdfs:label "Historical / Revolutionary Event"@en .
-
 mdhn:Protest a rdfs:Class ; rdfs:subClassOf mdhn:RevolutionaryEvent ; rdfs:label "Civic or Religious Protest"@en .
-
 mdhn:ConflictEvent a rdfs:Class ; rdfs:subClassOf mdhn:RevolutionaryEvent ; rdfs:label "Armed Conflict / Siege / Coup"@en .
-
-mdhn:DiplomaticCrisis a rdfs:Class ;
-    rdfs:subClassOf mdhn:RevolutionaryEvent ;
-    rdfs:label "Diplomatic Intervention or Ultimatum"@en .
-
-mdhn:PoliticalTransition a rdfs:Class ;
-    rdfs:subClassOf mdhn:RevolutionaryEvent ;
-    rdfs:label "Political Transition or Succession Event"@en .
-
+mdhn:DiplomaticCrisis a rdfs:Class ; rdfs:subClassOf mdhn:RevolutionaryEvent ; rdfs:label "Diplomatic Intervention or Ultimatum"@en .
+mdhn:PoliticalTransition a rdfs:Class ; rdfs:subClassOf mdhn:RevolutionaryEvent ; rdfs:label "Political Transition or Succession Event"@en .
 mdhn:SpatialEntity a rdfs:Class ; rdfs:label "Geographic Location or Site"@en .
-
 mdhn:City a rdfs:Class ; rdfs:subClassOf mdhn:SpatialEntity ; rdfs:label "City or Town"@en .
-
-mdhn:MonumentOrBuilding a rdfs:Class ;
-    rdfs:subClassOf mdhn:SpatialEntity ;
-    rdfs:label "Monument, Palace, Sanctuary, or Building"@en .
-
+mdhn:MonumentOrBuilding a rdfs:Class ; rdfs:subClassOf mdhn:SpatialEntity ; rdfs:label "Monument, Palace, Sanctuary, or Building"@en .
 mdhn:TemporalEntity a rdfs:Class ; rdfs:label "Temporal Interval or Date Anchor"@en .
-
 mdhn:DocumentOrConcession a rdfs:Class ; rdfs:label "Legal Document, Concession, Treaty, or Periodical"@en .
-
 mdhn:PrimarySourceBook a rdfs:Class ; rdfs:label "Historiographical Primary Source Corpus"@en .
 
+# Properties
 mdhn:memberOfFaction a owl:ObjectProperty ; rdfs:domain mdhn:HistoricalPerson ; rdfs:range mdhn:PoliticalFaction .
-
 mdhn:opposedFaction a owl:ObjectProperty ; rdfs:domain mdhn:HistoricalPerson ; rdfs:range mdhn:PoliticalFaction .
-
 mdhn:participatedIn a owl:ObjectProperty ; rdfs:domain mdhn:HistoricalPerson ; rdfs:range mdhn:RevolutionaryEvent .
-
 mdhn:initiatedBy a owl:ObjectProperty ; rdfs:domain mdhn:RevolutionaryEvent ; rdfs:range mdhn:HistoricalPerson .
-
 mdhn:hasTarget a owl:ObjectProperty ; rdfs:domain mdhn:RevolutionaryEvent ; rdfs:range mdhn:HistoricalPerson .
-
 mdhn:occurredAt a owl:ObjectProperty ; rdfs:domain mdhn:RevolutionaryEvent ; rdfs:range mdhn:SpatialEntity .
-
 mdhn:hasTemporalAnchor a owl:ObjectProperty ; rdfs:domain mdhn:RevolutionaryEvent ; rdfs:range mdhn:TemporalEntity .
-
 mdhn:locatedIn a owl:ObjectProperty ; rdfs:domain mdhn:SpatialEntity ; rdfs:range mdhn:SpatialEntity .
-
 mdhn:signedDocument a owl:ObjectProperty ; rdfs:domain mdhn:HistoricalPerson ; rdfs:range mdhn:DocumentOrConcession .
-
 mdhn:authoredBy a owl:ObjectProperty ; rdfs:domain mdhn:DocumentOrConcession ; rdfs:range mdhn:HistoricalPerson .
-
 mdhn:describedInBook a owl:ObjectProperty ; rdfs:domain owl:Thing ; rdfs:range mdhn:PrimarySourceBook .
-
 mdhn:sourcePageReference a owl:DatatypeProperty ; rdfs:domain owl:Thing ; rdfs:range xsd:string .
-
 mdhn:gregorianDate a owl:DatatypeProperty ; rdfs:domain mdhn:TemporalEntity ; rdfs:range xsd:date .
 
