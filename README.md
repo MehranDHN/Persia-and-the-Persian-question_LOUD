@@ -6,6 +6,8 @@ This project studies George N. Curzon's *Persia and the Persian Question* as a h
 
 The aim is to make Curzon's account easier to explore and compare while identifying its omissions, ambiguities, and contested claims. The graph is an analytical aid, not a claim that Curzon's account is neutral or complete. Assertions should be traceable to a source and page wherever possible, and interpretations should be distinguished from facts reported by the source.
 
+![Curzon Knowledge Graph Pipeline](/slides/Curzon_Knowledge_Graph_Pipeline_Overview.jpg)
+
 ## Project Goals
 
 - Treat Curzon's book as unstructured historical data and study reproducible ways to discover, identify, categorize, and extract its entities.
