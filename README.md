@@ -37,6 +37,8 @@ The current ontology is expressed in RDF/OWL. CIDOC CRM, SPARQL querying, SKOS v
 | `visualization/requirements.txt` | Python dependencies for the visualization script. |
 | `analysis/review_entities.py` | Page-level heuristic name candidate extraction and comparison with labels already in the RDF graph. |
 | `analysis/integrate_review.py` | Adds exact-label page occurrence references from the review CSV using ontology-defined properties. |
+| `analysis/entity_extraction/` | Shared candidate contract, NFKD-rule/NLTK/LangChain adapters, gold-set metrics, and experiment state machine. |
+| `analysis/gold/volume1_gold_template.csv` | Starter schema for manually adjudicated entity mentions. |
 | `analysis/requirements.txt` | Python dependencies for the entity review script. |
 | `analysis/reports/volume1_entity_review.csv` | Generated page-cited entity review queue; not asserted graph data. |
 | `plain_text_books/Curzon_vol1.txt` | Internet Archive full-text page for volume 1. Despite the extension, this file currently contains HTML rather than clean plain text. |
@@ -77,7 +79,7 @@ Create a manually adjudicated gold set from stratified pages across narrative, t
 - Mention precision, recall, and F1 using exact page-and-span matching; report a separately labeled normalized-text score if Unicode or punctuation normalization is allowed.
 - Entity-type accuracy on correctly matched mentions, with per-class precision/recall/F1 and a confusion matrix.
 - Candidate duplication rate, page coverage, and human acceptance/rejection rate.
-- Runtime, pages per minute, setup/model requirements, and (for hosted LLMs) token use and estimated cost.
+- Runtime, pages per minute, setup/model requirements, and (for hosted LLMs) provider-reported token use; calculate estimated cost from the provider's current pricing.
 - Failure examples and adjudicator agreement, not only aggregate scores.
 
 Do not report accuracy until a gold set exists. A candidate count, match rate against the current KG, or confidence emitted by a model is not accuracy.
@@ -126,7 +128,7 @@ flowchart TD
 
 The hosted LLM branch is disabled by default. Send only necessary page-sized excerpts, never the complete source by default, and review provider terms and source rights before enabling it. Store prompts, model/provider identifiers, parameters, and raw responses separately from accepted RDF assertions.
 
-**Implementation status:** `analysis/review_entities.py` currently implements the deterministic heuristic baseline and emits a review CSV. The comparative NLTK/LLM runners, gold-set scorer, and state-machine orchestrator are experimental/planned until their adapters and tests are in place; the Mermaid diagram describes the target workflow, not a claim that every stage is already implemented.
+**Implementation status:** `analysis/review_entities.py` remains the original review-CSV generator. The new `analysis.entity_extraction` package provides independent NFKD-rule, NLTK, and LangChain adapters, a shared candidate format, exact-span/type gold-set metrics, and a state-machine runner. NFKD is shared normalization; the NFKD track's extractor is a capitalization/honorific heuristic. The state machine currently runs methods sequentially and records per-method success, skip, failure, timing, token usage, and candidates. Human adjudication and accepted-candidate RDF integration remain separate gates; a combined consensus pipeline is a later experiment.
 
 ## Event Graph Preview
 
@@ -139,17 +141,33 @@ python visualization/visualize_events.py
 
 The output is `visualization/event_sample.html`. Pass `--max-events 0` to include every typed event, or use `--data`, `--ontology`, and `--output` to select other files or a different output path.
 
-## Entity Review
+## Entity Extraction Experiments
 
-The review utility uses local capitalization and honorific patterns with the page markers in the clean transcription to build a CSV of detected names, existing-label matches, candidate terms, page numbers, and supporting snippets. These rules are heuristic, not named-entity recognition: multiword candidates are more useful, while singleton terms are marked ambiguous. Fuzzy matches are suggestions only; verify candidates against the source scan before changing the graph. `review_entities.py` does not modify RDF files. `integrate_review.py` adds page references only for exact label matches, in a marked generated block; those references document lexical occurrence, not proof of the associated historical claim. Fuzzy and new candidates are not bulk-added.
+Run the independent methods over the same selected pages and inspect each method's candidates in the JSON report. For example, page 505:
 
 ```powershell
 python -m pip install -r analysis/requirements.txt
-python analysis/review_entities.py
-python analysis/integrate_review.py
+python -m analysis.entity_extraction.run_comparison --pages 505
 ```
 
-By default, the report is written to `analysis/reports/volume1_entity_review.csv`. The current page-marked transcription is for volume 1; volume 2 can be reviewed by passing a page-marked text file with `--text`.
+The default report is `analysis/reports/entity_method_comparison.json`. The NFKD-rule baseline needs no model downloads. NLTK is optional; install its package and model data before expecting that track to succeed:
+
+```powershell
+python -m pip install -r analysis/requirements-nltk.txt
+python -m nltk.downloader averaged_perceptron_tagger maxent_ne_chunker words
+python -m analysis.entity_extraction.run_comparison --methods nltk_ner --pages 505
+```
+
+Accuracy is not reported unless an adjudicated gold set is supplied with `--gold-csv`. Start with `analysis/gold/volume1_gold_template.csv`; annotate source-page text with exact character offsets and an agreed entity type. The report gives exact-span and NFKD-normalized-text precision/recall/F1 separately, plus type accuracy on exact-span matches. Compare results on the same pages and gold rows. Candidate counts and model confidence are not accuracy indicators.
+
+The hosted LangChain method is disabled by default and sends selected page text to the configured provider. Install `analysis/requirements-llm.txt`, set provider credentials securely, and explicitly select a small page sample and opt in:
+
+```powershell
+python -m pip install -r analysis/requirements-llm.txt
+python -m analysis.entity_extraction.run_comparison --methods langchain_llm --pages 505 --allow-external-api
+```
+
+LLM mode is capped at 20 selected pages per run. It records provider-reported tokens where available; use the provider's current pricing to estimate cost. Review rights and provider data-handling terms before sending any book text. No candidates are automatically merged into RDF. The original heuristic CSV tools remain available: `python analysis/review_entities.py` generates `analysis/reports/volume1_entity_review.csv`, and `python analysis/integrate_review.py` adds exact-label page references only.
 
 ## Licensing
 
