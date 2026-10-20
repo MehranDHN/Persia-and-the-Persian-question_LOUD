@@ -16,7 +16,8 @@ mdhn_data:CurzonVol1 a mdhn:PrimarySourceBook ;
     rdfs:label "Persia and the Persian Question, Volume 1"@en ;
     dcterms:creator mdhn_data:GeorgeNathanielCurzon ;
     dcterms:issued "1892"^^xsd:gYear ;
-    rdfs:comment "Extracted and purified from Internet Archive OCR of George N. Curzon's 1892 work."@en .
+    rdfs:comment "Extracted and purified from Internet Archive OCR of George N. Curzon's 1892 work."@en ;
+    rdfs:comment "Some page references were matched against the page-marked Frank Cass 1966 second impression; verify them against the 1892 scan."@en .
 
 mdhn_data:CurzonVol2 a mdhn:PrimarySourceBook ;
     rdfs:label "Persia and the Persian Question, Volume 2"@en ;
@@ -166,6 +167,8 @@ mdhn_data:NadirShah a mdhn:Monarch, mdhn:MilitaryLeader ;
     owl:sameAs wd:Q19224 ;
     rdfs:comment "Afsharid ruler; frequently referenced for historical conquests, Meshed, and ruins."@en ;
     mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
+
+mdhn_data:NadirShah mdhn:sourcePageReference "Vol. 1, p. 375 (possessive mention 'Nadir Shah's'; page-marked 1966 transcription)." .
 
 mdhn_data:ZellESoltan a mdhn:MilitaryLeader ;
     rdfs:label "Zell-e Soltan"@en ;
@@ -386,11 +389,12 @@ mdhn_data:RuknEdDowleh
     mdhn:describedInBook mdhn_data:CurzonVol1 .
 
 mdhn_data:ZellESoltan 
-    skos:altLabel "Mas'ud Mirza Zell-e Soltan"@en, "Zill-es-Sultan"@en, "Zell-es-Soltan"@en ;
+    skos:altLabel "Mas'ud Mirza Zell-e Soltan"@en, "Zill-es-Sultan"@en, "Zil-es-Sultan"@en, "Zell-es-Soltan"@en ;
     rdfs:comment "Powerful Qajar prince (son of Naser al-Din Shah), Governor of Isfahan and de facto ruler of much of southern and central Persia. Maintained a large private army and was a major political rival. Curzon discusses his position, court, and the economic and political conditions of the regions under his control."@en ;
     mdhn:heldOffice "Governor of Isfahan and southern provinces" ;
     mdhn:locatedIn mdhn_data:Isfahan ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
+    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1, pp. 130, 322, 409, 412, 415-417, 437, 470, 496, 500, 507, 511, 559, 593, 639 (source spelling 'Zil-es-Sultan'; page-marked 1966 transcription)." .
 
 mdhn_data:AminAlSultan 
     skos:altLabel "Mirza Ali Asghar Khan Amin al-Sultan"@en, "Atabak-e Azam"@en ;
@@ -456,9 +460,43 @@ mdhn_data:GovernorOfResht mdhn:participatedIn mdhn_data:GreatGameCompetition .
 # Historical Qajar and earlier rulers
 mdhn_data:AghaMohammadKhan a mdhn:Monarch, mdhn:MilitaryLeader ;
     rdfs:label "Agha Mohammad Khan Qajar"@en ;
+    skos:altLabel "Agha Mohammed Khan Kajar"@en ;
     owl:sameAs wd:Q204645 ;
     rdfs:comment "Founder of the Qajar dynasty; frequently referenced for the establishment of the dynasty and early 19th-century history."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
+    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1, pp. 151, 165, 187 (Curzon spelling variant; page-marked 1966 transcription)." .
+
+mdhn_data:AbakaKhan a mdhn:HistoricalPerson ;
+    rdfs:label "Abaka Khan"@en ;
+    rdfs:comment "Mongol prince identified by Curzon as the son of Hulaku Khan and great-grandson of Jenghiz Khan."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1, p. 505 (page-marked 1966 transcription)." .
+
+mdhn_data:AbbasKuliKhan a mdhn:HistoricalPerson ;
+    rdfs:label "Abbas Kuli Khan"@en ;
+    rdfs:comment "Turkish chieftain described by Curzon as restored as ruler of Nishapur."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1, p. 263 (page-marked 1966 transcription)." .
+
+mdhn_data:AbdurRahmanKhan a mdhn:HistoricalPerson ;
+    rdfs:label "Abdur Rahman Khan"@en ;
+    rdfs:comment "Afghan amir discussed by Curzon in relation to Afghanistan's policy toward Persia."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1, pp. 45, 216 (page-marked 1966 transcription)." .
+
+mdhn_data:AbdusSamedMirza a mdhn:HistoricalPerson ;
+    rdfs:label "Abdus Samed Mirza"@en ;
+    skos:altLabel "Izz-ed-Dowleh"@en ;
+    rdfs:comment "Qajar prince identified by Curzon as the Izz-ed-Dowleh and a former Minister of Justice."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1, p. 423 (page-marked 1966 transcription)." .
+
+mdhn_data:AbulHasanKhanGhaffari a mdhn:HistoricalPerson ;
+    rdfs:label "Abul Hasan Khan Ghaffari"@en ;
+    skos:altLabel "Sani-el-Mulk"@en ;
+    rdfs:comment "Artist whose paintings are noted by Curzon in his description of the Shah's palace."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1, p. 317 (page-marked 1966 transcription)." .
 
 mdhn_data:FathAliShah a mdhn:Monarch ;
     rdfs:label "Fath-Ali Shah Qajar"@en ;
@@ -847,3 +885,49 @@ mdhn_data:SheikhUbeidullahRevolt a mdhn:ConflictEvent ;
     rdfs:comment "Major Kurdish uprising against Persian authority; discussed by Curzon in border and tribal context."@en .
 
 mdhn_data:SheikhUbeidullah mdhn:participatedIn mdhn_data:SheikhUbeidullahRevolt .
+
+# BEGIN generated exact-label page references
+mdhn_data:AbbasMirza mdhn:sourcePageReference "Vol. 1 printed pages 42, 98, 100, 109, 159, 160, 192, 196, 272, 281, 288, 393, 394, 395, 398, 409, 412, 422, 437, 521, 522, 523, 524, 525, 528, 558, 576, 577, 578, 579, 580, 581, 582, 609, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Arabistan mdhn:sourcePageReference "Vol. 1 printed pages 416, 437, 485, 593, 601, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Ashkabad mdhn:sourcePageReference "Vol. 1 printed pages 45, 69, 78, 85, 87, 88, 89, 91, 93, 110, 120, 125, 175, 188, 193, 204, 211, 212, 214, 217, 276, 282, 408, 487, 627, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Astrabad mdhn:sourcePageReference "Vol. 1 printed pages 32, 44, 45, 76, 90, 98, 120, 167, 182, 183, 185, 186, 187, 188, 189, 190, 191, 201, 204, 269, 282, 294, 303, 353, 355, 356, 357, 358, 359, 360, 365, 374, 375, 376, 378, 379, 388, 392, 437, 467, 472, 593, 596, 600, 601, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Azerbaijan mdhn:sourcePageReference "Vol. 1 printed pages 42, 57, 169, 204, 333, 369, 386, 393, 396, 397, 413, 415, 431, 435, 437, 490, 506, 513, 515, 516, 517, 523, 524, 525, 526, 527, 528, 530, 532, 534, 536, 542, 546, 548, 554, 556, 576, 577, 578, 579, 581, 583, 593, 600, 601, 607, 612, 622, 625, 630, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Baku mdhn:sourcePageReference "Vol. 1 printed pages 27, 28, 32, 56, 59, 61, 62, 65, 66, 67, 71, 72, 186, 187, 208, 359, 366, 373, 374, 466, 527, 617, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Bushire mdhn:sourcePageReference "Vol. 1 printed pages 8, 27, 46, 47, 130, 437, 443, 466, 467, 474, 479, 488, 490, 510, 524, 600, 616, 617, 629, 630, 631, 635, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:CaspianSea mdhn:sourcePageReference "Vol. 1 printed pages 25, 179, 186, 244, 372, 386, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Enzeli mdhn:sourcePageReference "Vol. 1 printed pages 27, 28, 31, 183, 353, 360, 370, 375, 381, 385, 467, 472, 600, 620, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Fars mdhn:sourcePageReference "Vol. 1 printed pages 416, 429, 431, 437, 439, 485, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:HoutumSchindler mdhn:sourcePageReference "Vol. 1 printed pages 266, 344, 517, 521; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Gilan mdhn:sourcePageReference "Vol. 1 printed pages 29, 186, 203, 353, 355, 358, 360, 361, 363, 364, 365, 366, 367, 368, 369, 370, 372, 374, 375, 376, 383, 384, 385, 386, 387, 388, 429, 437, 485, 593, 600, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:OfficeGovernorKhorasan mdhn:sourcePageReference "Vol. 1 printed pages 88, 101, 112, 160, 163, 168, 258, 423, 431, 612; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:GovernorOfHamadan mdhn:sourcePageReference "Vol. 1 printed pages 423; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Hamadan mdhn:sourcePageReference "Vol. 1 printed pages 51, 52, 348, 423, 437, 467, 472, 488, 490, 500, 506, 510, 513, 528, 537, 558, 566, 567, 568, 570, 585, 593, 601, 603, 607, 608, 630, 631, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Herat mdhn:sourcePageReference "Vol. 1 printed pages 8, 46, 76, 80, 90, 101, 106, 115, 161, 173, 175, 180, 187, 188, 197, 198, 201, 203, 210, 217, 222, 226, 229, 230, 234, 236, 240, 241, 242, 282, 288, 291, 353, 422, 513, 525, 582, 584, 607, 626, 627, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Isfahan mdhn:sourcePageReference "Vol. 1 printed pages 9, 18, 20, 27, 35, 36, 37, 46, 47, 56, 97, 175, 246, 283, 295, 308, 309, 321, 330, 332, 333, 336, 340, 369, 372, 373, 376, 377, 380, 388, 403, 406, 416, 418, 420, 431, 437, 468, 470, 472, 474, 479, 489, 496, 500, 505, 506, 507, 510, 511, 513, 546, 558, 570, 575, 593, 600, 601, 602, 629, 630, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Isfahan mdhn:sourcePageReference "Vol. 1 printed pages 520, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:KarunRiver mdhn:sourcePageReference "Vol. 1 printed pages 47; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Kazvin mdhn:sourcePageReference "Vol. 1 printed pages 31, 32, 35, 36, 37, 38, 39, 41, 42, 289, 387, 422, 431, 437, 466, 467, 486, 488, 528, 570, 593, 600, 601, 619, 625, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Kerman mdhn:sourcePageReference "Vol. 1 printed pages 46, 178, 199, 208, 210, 211, 212, 215, 222, 228, 235, 244, 324, 333, 369, 375, 406, 437, 466, 468, 472, 488, 513, 528, 558, 582, 593, 600, 601, 628, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Khorasan mdhn:sourcePageReference "Vol. 1 printed pages 2, 8, 45, 52, 69, 78, 85, 87, 88, 90, 97, 99, 101, 102, 105, 111, 112, 120, 138, 142, 147, 150, 160, 163, 168, 169, 170, 171, 172, 173, 175, 179, 180, 181, 182, 188, 189, 190, 191, 192, 194, 196, 199, 201, 202, 203, 204, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 235, 236, 237, 244, 258, 262, 265, 269, 270, 275, 278, 279, 321, 336, 353, 356, 365, 368, 369, 375, 386, 392, 406, 422, 423, 431, 436, 437, 513, 516, 523, 524, 528, 554, 582, 600, 601, 602, 612, 622, 626, 627, 628, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Arabistan mdhn:sourcePageReference "Vol. 1 printed pages 583, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Kurdistan mdhn:sourcePageReference "Vol. 1 printed pages 416, 435, 437, 515, 516, 535, 549, 550, 553, 554, 556, 557, 558, 575, 601, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Luristan mdhn:sourcePageReference "Vol. 1 printed pages 416, 436, 437, 549, 557, 570, 583, 593, 600, 601, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Mashhad mdhn:sourcePageReference "Vol. 1 printed pages 149, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Mashhad mdhn:sourcePageReference "Vol. 1 printed pages 8, 35, 45, 46, 85, 88, 91, 93, 94, 101, 105, 109, 110, 111, 112, 114, 115, 120, 121, 123, 125, 129, 130, 131, 132, 136, 137, 138, 140, 141, 144, 146, 147, 149, 150, 151, 152, 153, 154, 155, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 173, 174, 175, 179, 181, 187, 188, 189, 192, 193, 195, 196, 198, 199, 201, 203, 204, 208, 209, 210, 211, 212, 215, 217, 218, 220, 221, 234, 235, 237, 244, 246, 247, 248, 255, 256, 257, 258, 259, 264, 266, 267, 272, 276, 278, 282, 283, 285, 288, 289, 291, 292, 298, 299, 302, 322, 329, 336, 357, 358, 359, 388, 395, 429, 437, 460, 466, 467, 472, 474, 479, 487, 488, 489, 510, 511, 513, 515, 518, 522, 528, 600, 608, 611, 620, 626, 627, 628, 631, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Mohammerah mdhn:sourcePageReference "Vol. 1 printed pages 468, 524, 569, 600, 620, 622, 630, 631, 635; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:NadirShah mdhn:sourcePageReference "Vol. 1 printed pages 6, 20, 98, 109, 110, 115, 128, 133, 135, 136, 146, 150, 156, 157, 158, 162, 165, 192, 193, 204, 229, 263, 271, 279, 288, 308, 317, 320, 321, 357, 370, 375, 377, 405, 435, 453, 471, 505, 512, 558, 572, 575, 576, 593, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Persepolis mdhn:sourcePageReference "Vol. 1 printed pages 10, 19, 312, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:PersianGulf mdhn:sourcePageReference "Vol. 1 printed pages 7, 8, 25, 27, 46, 47, 154, 204, 210, 236, 274, 366, 398, 489, 490, 516, 525, 614, 629, 630, 632, 635, 637, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Resht mdhn:sourcePageReference "Vol. 1 printed pages 27, 29, 31, 32, 34, 37, 39, 41, 44, 46, 93, 170, 296, 353, 362, 368, 374, 375, 376, 384, 385, 386, 387, 388, 437, 466, 467, 472, 474, 479, 487, 488, 506, 513, 516, 615, 616, 619, 620, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:RuknEdDowleh mdhn:sourcePageReference "Vol. 1 printed pages 163, 168, 204, 395, 423, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Seistan mdhn:sourcePageReference "Vol. 1 printed pages 8, 175, 200, 201, 202, 203, 204, 216, 217, 218, 222, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 241, 242, 243, 244, 265, 276, 372, 375, 406, 437, 472, 602, 628, 629, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:SheikhUbeidullah mdhn:sourcePageReference "Vol. 1 printed pages 536, 553; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Shiraz mdhn:sourcePageReference "Vol. 1 printed pages 9, 20, 35, 46, 47, 56, 228, 246, 308, 313, 330, 333, 336, 416, 417, 420, 431, 437, 466, 474, 479, 488, 490, 505, 506, 508, 510, 511, 513, 527, 583, 591, 593, 601, 629, 631, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:HenryRawlinson mdhn:sourcePageReference "Vol. 1 printed pages 552; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Seistan mdhn:sourcePageReference "Vol. 1 printed pages 238, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Tabriz mdhn:sourcePageReference "Vol. 1 printed pages 35, 37, 39, 40, 41, 42, 43, 100, 208, 209, 210, 215, 330, 336, 393, 395, 396, 397, 413, 415, 431, 437, 454, 466, 467, 471, 472, 474, 478, 479, 487, 488, 490, 496, 506, 515, 516, 517, 518, 519, 520, 521, 522, 525, 526, 528, 530, 531, 532, 534, 537, 542, 548, 554, 556, 558, 568, 570, 576, 578, 600, 601, 615, 625, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Tabriz mdhn:sourcePageReference "Vol. 1 printed pages 513, 519, 520; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Tehran mdhn:sourcePageReference "Vol. 1 printed pages 8, 9, 21, 22, 25, 30, 31, 32, 35, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 51, 54, 56, 57, 100, 101, 112, 131, 153, 165, 167, 168, 169, 175, 181, 182, 189, 190, 204, 208, 209, 215, 219, 231, 244, 246, 247, 248, 255, 256, 258, 266, 276, 278, 282, 285, 289, 291, 293, 294, 297, 298, 299, 301, 302, 303, 304, 305, 306, 307, 308, 310, 311, 313, 317, 318, 320, 321, 322, 325, 327, 328, 330, 331, 332, 333, 334, 335, 336, 337, 338, 340, 342, 343, 344, 345, 347, 350, 352, 353, 356, 380, 382, 383, 388, 393, 396, 398, 400, 406, 407, 410, 412, 413, 416, 418, 420, 422, 423, 426, 428, 429, 430, 431, 437, 454, 458, 460, 461, 465, 466, 467, 468, 469, 471, 472, 473, 474, 477, 479, 480, 483, 485, 486, 487, 488, 489, 490, 494, 496, 500, 501, 506, 507, 510, 512, 513, 525, 528, 531, 537, 542, 550, 554, 556, 557, 558, 559, 572, 576, 578, 583, 585, 586, 587, 588, 589, 593, 595, 600, 601, 602, 604, 607, 608, 609, 614, 615, 616, 617, 618, 619, 620, 622, 623, 625, 626, 628, 629, 630, 631, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Tiflis mdhn:sourcePageReference "Vol. 1 printed pages 27, 40, 54, 61, 63, 64, 65, 66, 84, 466, 527, 615, 625, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+mdhn_data:Tehran mdhn:sourcePageReference "Vol. 1 printed pages 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+# END generated exact-label page references
