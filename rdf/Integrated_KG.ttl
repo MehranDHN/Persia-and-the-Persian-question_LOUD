@@ -1,470 +1,47 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lcnaf: <http://id.loc.gov/authorities/names/> .
 @prefix mdhn: <https://github.com/MehranDHN//Persia-and-the-Persian-question_LOUD/> .
 @prefix mdhn_data: <https://github.com/MehranDHN/Persia-and-the-Persian-question_LOUD/data/> .
-@prefix wd: <http://www.wikidata.org/entity/> .
-@prefix lcnaf: <http://id.loc.gov/authorities/names/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-
-
-
-
-# ========== PRIMARY SOURCES ==========
-mdhn_data:CurzonVol1 a mdhn:PrimarySourceBook ;
-    rdfs:label "Persia and the Persian Question, Volume 1"@en ;
-    dcterms:creator mdhn_data:GeorgeNathanielCurzon ;
-    dcterms:issued "1892"^^xsd:gYear ;
-    rdfs:comment "Extracted and purified from Internet Archive OCR of George N. Curzon's 1892 work."@en ;
-    rdfs:comment "Some page references were matched against the page-marked Frank Cass 1966 second impression; verify them against the 1892 scan."@en .
-
-mdhn_data:CurzonVol2 a mdhn:PrimarySourceBook ;
-    rdfs:label "Persia and the Persian Question, Volume 2"@en ;
-    dcterms:creator mdhn_data:GeorgeNathanielCurzon ;
-    dcterms:issued "1892"^^xsd:gYear .
-
-# ========== AGENTS (reconciled where possible) ==========
-mdhn_data:NaserAlDinShah a mdhn:Monarch ;
-    rdfs:label "Naser al-Din Shah Qajar"@en ;
-    skos:altLabel "Nasir al-Din Shah"@en, "Nāṣer al-Dīn Shāh"@en ;
-    owl:sameAs wd:Q159416 ;
-    rdfs:comment "Shah of Qajar Iran 1848–1896; central figure in Curzon's account of contemporary Persia."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 ;
-    mdhn:sourcePageReference "Frequent mentions as the reigning Shah throughout both volumes" .
-
-mdhn_data:GeorgeNathanielCurzon a mdhn:IntellectualOrator ;
-    rdfs:label "George Nathaniel Curzon, 1st Marquess Curzon of Kedleston"@en ;
-    skos:altLabel "Lord Curzon"@en, "Hon. George N. Curzon"@en ;
-    owl:sameAs lcnaf:n50019619, wd:Q271878 ;
-    rdfs:comment "Author of the two volumes; travelled in Persia 1889–1890 as Times correspondent."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:AminAlSultan a mdhn:FinancialAdministrator ;
-    rdfs:label "Mirza Ali Asghar Khan Amin al-Sultan"@en ;
-    skos:altLabel "Amin al-Sultan"@en, "Atabak-e Azam"@en, "Amin-e Soltan"@en ;
-    owl:sameAs wd:Q957636 ;
-    rdfs:comment "Powerful Qajar minister and multiple-time prime minister under Naser al-Din Shah; frequently discussed in context of court and concessions."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-# ========== SPATIAL ENTITIES ==========
-mdhn_data:Tehran a mdhn:City ;
-    rdfs:label "Tehran"@en ;
-    skos:altLabel "Teheran"@en, "Ṭihrān"@en ;
-    owl:sameAs wd:Q3616 ;
-    rdfs:comment "Capital of Persia; extensively described as the political and commercial centre."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Tabriz a mdhn:City ;
-    rdfs:label "Tabriz"@en ;
-    skos:altLabel "Tauris"@en ;
-    owl:sameAs wd:Q15657 ;
-    rdfs:comment "Major commercial city of Azerbaijan; key distribution centre for Russian and European goods."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Isfahan a mdhn:City ;
-    rdfs:label "Isfahan"@en ;
-    skos:altLabel "Ispahan"@en, "Esfahan"@en ;
-    owl:sameAs wd:Q42053 ;
-    rdfs:comment "Historic Safavid capital; described for its architecture, industry, and position on routes."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Mashhad a mdhn:City ;
-    rdfs:label "Mashhad"@en ;
-    skos:altLabel "Meshed"@en, "Mashad"@en ;
-    owl:sameAs wd:Q121157 ;
-    rdfs:comment "Holy city of Imam Reza shrine; major pilgrimage centre and gateway to Khorasan."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Shiraz a mdhn:City ;
-    rdfs:label "Shiraz"@en ;
-    owl:sameAs wd:Q639706 ;
-    rdfs:comment "Southern city; discussed in context of trade routes and caravan roads from the Gulf."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Bushire a mdhn:City ;
-    rdfs:label "Bushire"@en ;
-    skos:altLabel "Bushehr"@en, "Bandar Bushehr"@en ;
-    owl:sameAs wd:Q155400 ;
-    rdfs:comment "Principal southern port; terminus of proposed railway and trade routes."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:GolestanPalace a mdhn:MonumentOrBuilding ;
-    rdfs:label "Golestan Palace"@en ;
-    rdfs:comment "Qajar royal complex in Tehran; seat of the Shah and centre of court life."@en ;
-    mdhn:locatedIn mdhn_data:Tehran ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:ImamRezaShrine a mdhn:MonumentOrBuilding ;
-    rdfs:label "Imam Reza Shrine"@en ;
-    skos:altLabel "Shrine of Imam Riza"@en, "Meshed Shrine"@en ;
-    rdfs:comment "Major Shi'a sanctuary in Mashhad; focal point of pilgrimage and local economy."@en ;
-    mdhn:locatedIn mdhn_data:Mashhad ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-# ========== TEMPORAL ==========
-mdhn_data:CurzonJourney1889 a mdhn:TemporalEntity ;
-    rdfs:label "Curzon's Journey to Persia 1889–1890"@en ;
-    mdhn:gregorianDate "1889-09-01"^^xsd:date ;
-    rdfs:comment "Approximate period of Curzon's six-month travels as Times correspondent."@en .
-
-mdhn_data:ReuterConcession1872 a mdhn:TemporalEntity ;
-    rdfs:label "Reuter Concession 1872"@en ;
-    mdhn:gregorianDate "1872-07-25"^^xsd:date ;
-    rdfs:comment "Date of the notorious comprehensive concession later cancelled."@en .
-
-# ========== EVENTS ==========
-mdhn_data:CurzonTravelEvent a mdhn:RevolutionaryEvent ;
-    rdfs:label "George N. Curzon's Journey through Persia"@en ;
-    rdfs:comment "Extensive travels documenting geography, politics, trade, and the Russian threat; basis of the two volumes."@en ;
-    mdhn:initiatedBy mdhn_data:GeorgeNathanielCurzon ;
-    mdhn:occurredAt mdhn_data:Tehran, mdhn_data:Tabriz, mdhn_data:Isfahan, mdhn_data:Mashhad ;
-    mdhn:hasTemporalAnchor mdhn_data:CurzonJourney1889 ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:ReuterConcessionEvent a mdhn:DiplomaticCrisis ;
-    rdfs:label "Grant and Cancellation of the Reuter Concession"@en ;
-    rdfs:comment "1872 comprehensive monopoly concession to Baron Julius de Reuter; cancelled under Russian and domestic pressure. Extensively analysed by Curzon."@en ;
-    mdhn:initiatedBy mdhn_data:NaserAlDinShah ;
-    mdhn:hasTemporalAnchor mdhn_data:ReuterConcession1872 ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 ;
-    mdhn:sourcePageReference "Detailed discussion of the Reuter Concession and its implications for railway and industrial policy." .
-
-mdhn_data:RailwayProjectsEvent a mdhn:RevolutionaryEvent ;
-    rdfs:label "Proposed Railway Concessions and Routes in Persia"@en ;
-    rdfs:comment "Extensive analysis of possible railway lines from the north (Caucasus/Caspian), south (Persian Gulf), east (India/Seistan), and west (Baghdad); strategic and commercial implications."@en ;
-    mdhn:occurredAt mdhn_data:Tehran, mdhn_data:Tabriz, mdhn_data:Bushire ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 ;
-    mdhn:sourcePageReference "Chapter on Railways (Vol. 1) and related discussions of routes and strategic competition." .
-
-# ========== DOCUMENTS ==========
-mdhn_data:ReuterConcessionDoc a mdhn:DocumentOrConcession ;
-    rdfs:label "Reuter Concession of 1872"@en ;
-    rdfs:comment "Comprehensive industrial, railway, mining, and customs monopoly granted to Baron de Reuter and later revoked."@en ;
-    mdhn:signedDocument mdhn_data:NaserAlDinShah ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-# Additional linking
-mdhn_data:NaserAlDinShah mdhn:signedDocument mdhn_data:ReuterConcessionDoc ;
-    mdhn:participatedIn mdhn_data:ReuterConcessionEvent .
-
-# ========== EXPANDED KG: ALL CHAPTERS INTEGRATED ==========
-# Note: Chapter boundaries are OCR-degraded; entities are linked to volumes and thematic sections
-# covering the full structure of both volumes (Intro/Routes, Journey, Transcaspia/Khorasan,
-# Provinces, Gulf, Antiquities, Trade, Foreign Policy, Railways, etc.)
-
-# Additional Agents
-mdhn_data:BaronJuliusDeReuter a mdhn:FinancialAdministrator ;
-    rdfs:label "Baron Julius de Reuter"@en ;
-    skos:altLabel "Paul Julius Reuter"@en ;
-    rdfs:comment "German-born British financier who received the comprehensive 1872 Reuter Concession."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 ;
-    mdhn:sourcePageReference "Detailed analysis in railway and concession chapters of Vol. 1." .
-
-mdhn_data:NadirShah a mdhn:Monarch, mdhn:MilitaryLeader ;
-    rdfs:label "Nadir Shah"@en ;
-    skos:altLabel "Nader Shah Afshar"@en ;
-    owl:sameAs wd:Q19224 ;
-    rdfs:comment "Afsharid ruler; frequently referenced for historical conquests, Meshed, and ruins."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:NadirShah mdhn:sourcePageReference "Vol. 1, p. 375 (possessive mention 'Nadir Shah's'; page-marked 1966 transcription)." .
-
-mdhn_data:ZellESoltan a mdhn:MilitaryLeader ;
-    rdfs:label "Zell-e Soltan"@en ;
-    skos:altLabel "Mas'ud Mirza Zell-e Soltan"@en ;
-    rdfs:comment "Powerful Qajar prince, governor of Isfahan and southern provinces; rival of the Shah."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:RuknEdDowleh a mdhn:HistoricalPerson ;
-    rdfs:label "Rukn-ed-Dowleh"@en ;
-    rdfs:comment "Governor of Khorasan / Meshed region encountered by Curzon."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-# Additional Cities and Places (chapter-relevant)
-mdhn_data:Resht a mdhn:City ;
-    rdfs:label "Resht"@en ;
-    skos:altLabel "Rasht"@en ;
-    owl:sameAs wd:Q173270 ;
-    rdfs:comment "Caspian port and Gilan capital; key entry point from Russia."@en ;
-    mdhn:locatedIn mdhn_data:Gilan ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:Kazvin a mdhn:City ;
-    rdfs:label "Kazvin"@en ;
-    skos:altLabel "Qazvin"@en ;
-    owl:sameAs wd:Q131322 ;
-    rdfs:comment "Town on the route from Resht/Tabriz to Tehran."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:Hamadan a mdhn:City ;
-    rdfs:label "Hamadan"@en ;
-    owl:sameAs wd:Q168865 ;
-    rdfs:comment "Western city on Baghdad-Tehran route; historical Ecbatana associations."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Kerman a mdhn:City ;
-    rdfs:label "Kerman"@en ;
-    owl:sameAs wd:Q170491 ;
-    rdfs:comment "Southeastern commercial and industrial centre; linked to Seistan and Gulf routes."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Herat a mdhn:City ;
-    rdfs:label "Herat"@en ;
-    owl:sameAs wd:Q45313 ;
-    rdfs:comment "Afghan city of strategic importance; Russian and British interest in the Great Game context."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Seistan a mdhn:SpatialEntity ;
-    rdfs:label "Seistan"@en ;
-    skos:altLabel "Sistan"@en ;
-    rdfs:comment "Eastern border region; potential railway and trade corridor to India/Baluchistan."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Ashkabad a mdhn:City ;
-    rdfs:label "Ashkabad"@en ;
-    skos:altLabel "Ashgabat"@en ;
-    owl:sameAs wd:Q1327 ;
-    rdfs:comment "Transcaspian Railway terminus; Russian base near Persian border."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:Baku a mdhn:City ;
-    rdfs:label "Baku"@en ;
-    owl:sameAs wd:Q9248 ;
-    rdfs:comment "Caspian oil port and Russian railhead; possible starting point for northern railways into Persia."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:Tiflis a mdhn:City ;
-    rdfs:label "Tiflis"@en ;
-    skos:altLabel "Tbilisi"@en ;
-    owl:sameAs wd:Q994 ;
-    rdfs:comment "Caucasian capital; route via Erivan/Julfa to Tabriz."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:PersianGulf a mdhn:SpatialEntity ;
-    rdfs:label "Persian Gulf"@en ;
-    owl:sameAs wd:Q34675 ;
-    rdfs:comment "Southern maritime frontier; trade, strategic access, and proposed railway termini (Bushire, Mohammerah, etc.)."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:CaspianSea a mdhn:SpatialEntity ;
-    rdfs:label "Caspian Sea"@en ;
-    owl:sameAs wd:Q5484 ;
-    rdfs:comment "Northern maritime frontier; Russian monopoly of access, ports at Enzeli/Resht."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Gilan a mdhn:SpatialEntity ;
-    rdfs:label "Gilan"@en ;
-    rdfs:comment "Caspian province; Resht as capital, silk and trade with Russia."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:Khorasan a mdhn:SpatialEntity ;
-    rdfs:label "Khorasan"@en ;
-    rdfs:comment "Northeastern province; Meshed as capital, pilgrimage, Russian threat, grain."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:Azerbaijan a mdhn:SpatialEntity ;
-    rdfs:label "Azerbaijan"@en ;
-    rdfs:comment "Northwestern province; Tabriz as commercial capital, Russian influence."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Fars a mdhn:SpatialEntity ;
-    rdfs:label "Fars"@en ;
-    rdfs:comment "Southern province; Shiraz as capital, antiquity sites."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
-
-# Monuments and Buildings
-mdhn_data:Persepolis a mdhn:MonumentOrBuilding ;
-    rdfs:label "Persepolis"@en ;
-    owl:sameAs wd:Q129072 ;
-    rdfs:comment "Achaemenid ruins extensively described in Vol. 2 antiquities chapters."@en ;
-    mdhn:locatedIn mdhn_data:Fars ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
-
-mdhn_data:Pasargadae a mdhn:MonumentOrBuilding ;
-    rdfs:label "Pasargadae / Tomb of Cyrus"@en ;
-    owl:sameAs wd:Q193704 ;
-    rdfs:comment "Site of Cyrus's tomb; visited and described by Curzon."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
-
-mdhn_data:NaqshERostam a mdhn:MonumentOrBuilding ;
-    rdfs:label "Naqsh-e Rostam"@en ;
-    rdfs:comment "Sasanian and Achaemenid rock reliefs and tombs near Persepolis."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
-
-mdhn_data:SiOSePol a mdhn:MonumentOrBuilding ;
-    rdfs:label "Si-o-se-pol Bridge"@en ;
-    skos:altLabel "Bridge of Allahverdi Khan"@en ;
-    rdfs:comment "Famous Safavid bridge in Isfahan."@en ;
-    mdhn:locatedIn mdhn_data:Isfahan ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
-
-mdhn_data:KhajuBridge a mdhn:MonumentOrBuilding ;
-    rdfs:label "Khaju Bridge"@en ;
-    rdfs:comment "Safavid bridge in Isfahan."@en ;
-    mdhn:locatedIn mdhn_data:Isfahan ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
-
-mdhn_data:ChehelSotoun a mdhn:MonumentOrBuilding ;
-    rdfs:label "Chehel Sotoun Palace"@en ;
-    rdfs:comment "Safavid palace in Isfahan."@en ;
-    mdhn:locatedIn mdhn_data:Isfahan ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
-
-# Additional Events (thematic / chapter-level)
-mdhn_data:TobaccoConcessionEvent a mdhn:Protest, mdhn:DiplomaticCrisis ;
-    rdfs:label "Tobacco Concession and Protest (1890-1892)"@en ;
-    rdfs:comment "Monopoly granted to British company; popular and clerical resistance; context for Curzon's analysis of concessions."@en ;
-    mdhn:initiatedBy mdhn_data:NaserAlDinShah ;
-    mdhn:hasTemporalAnchor mdhn_data:ReuterConcession1872 ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:TranscaspianRailwayImpact a mdhn:DiplomaticCrisis ;
-    rdfs:label "Impact of the Transcaspian Railway"@en ;
-    rdfs:comment "Russian railway construction altering strategic balance in Khorasan and Central Asia."@en ;
-    mdhn:occurredAt mdhn_data:Ashkabad, mdhn_data:Mashhad ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:GreatGameCompetition a mdhn:DiplomaticCrisis ;
-    rdfs:label "Anglo-Russian Competition in Persia (Great Game)"@en ;
-    rdfs:comment "Overarching theme of both volumes: British vs Russian influence via trade, railways, and political pressure."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:IsfahanDescriptionEvent a mdhn:RevolutionaryEvent ;
-    rdfs:label "Curzon's Description of Isfahan and its Monuments"@en ;
-    rdfs:comment "Detailed account of the former Safavid capital, bridges, palaces, and current state (Vol. 2)."@en ;
-    mdhn:occurredAt mdhn_data:Isfahan ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
-
-mdhn_data:AntiquitiesFarsEvent a mdhn:RevolutionaryEvent ;
-    rdfs:label "Examination of Achaemenid and Sasanian Remains in Fars"@en ;
-    rdfs:comment "Persepolis, Naqsh-e Rostam, Pasargadae, and related sites (Vol. 2)."@en ;
-    mdhn:occurredAt mdhn_data:Persepolis, mdhn_data:Pasargadae, mdhn_data:NaqshERostam ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
-
-# Link more
-mdhn_data:NaserAlDinShah mdhn:participatedIn mdhn_data:TobaccoConcessionEvent, mdhn_data:GreatGameCompetition .
-mdhn_data:GeorgeNathanielCurzon mdhn:participatedIn mdhn_data:CurzonTravelEvent, mdhn_data:IsfahanDescriptionEvent, mdhn_data:AntiquitiesFarsEvent .
-
-# Volume-level thematic grouping (all chapters covered under these umbrellas)
-mdhn_data:Vol1Themes a mdhn:RevolutionaryEvent ;
-    rdfs:label "Volume 1 Themes: Routes, Journey, Khorasan, Northern and Western Approaches"@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:Vol2Themes a mdhn:RevolutionaryEvent ;
-    rdfs:label "Volume 2 Themes: Southern Provinces, Antiquities, Gulf, Trade, Foreign Policy, Railways"@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
-
-# Further chapter-spanning additions
-mdhn_data:Mohammerah a mdhn:City ;
-    rdfs:label "Mohammerah"@en ;
-    skos:altLabel "Khorramshahr"@en ;
-    rdfs:comment "Southern port at the head of the Karun; proposed railway starting point superior to Bushire."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:KarunRiver a mdhn:SpatialEntity ;
-    rdfs:label "Karun River"@en ;
-    rdfs:comment "Navigable river; British trade concession and potential railway corridor from the Gulf."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:BaghdadTehranRoute a mdhn:RevolutionaryEvent ;
-    rdfs:label "Baghdad-Tehran Route and Proposed Railway"@en ;
-    rdfs:comment "Western land route via Kermanshah and Hamadan; merchandise and passenger traffic discussed."@en ;
-    mdhn:occurredAt mdhn_data:Hamadan, mdhn_data:Tehran ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:EuphratesValleyRailway a mdhn:RevolutionaryEvent ;
-    rdfs:label "Euphrates Valley / Indo-Mediterranean Railway Schemes"@en ;
-    rdfs:comment "Historical proposals for a railway from the Mediterranean to the Persian Gulf, analysed and largely rejected by Curzon."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-# ========== ENRICHMENTS AND ADDITIONAL LOCAL GOVERNORS ==========
-
-# Enriched existing agents
-mdhn_data:RuknEdDowleh 
-    skos:altLabel "Rukn al-Dawla"@en, "Rukn-ed-Dowleh"@en ;
-    rdfs:comment "Qajar prince and Governor-General of Khorasan (including Meshed) at the time of Curzon's visit (c. 1889). Brother of Naser al-Din Shah. Curzon records an interview with him and describes the local administration and garrison under his authority."@en ;
-    mdhn:heldOffice "Governor-General of Khorasan" ;
-    mdhn:locatedIn mdhn_data:Khorasan, mdhn_data:Mashhad ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:ZellESoltan 
-    skos:altLabel "Mas'ud Mirza Zell-e Soltan"@en, "Zill-es-Sultan"@en, "Zil-es-Sultan"@en, "Zell-es-Soltan"@en ;
-    rdfs:comment "Powerful Qajar prince (son of Naser al-Din Shah), Governor of Isfahan and de facto ruler of much of southern and central Persia. Maintained a large private army and was a major political rival. Curzon discusses his position, court, and the economic and political conditions of the regions under his control."@en ;
-    mdhn:heldOffice "Governor of Isfahan and southern provinces" ;
-    mdhn:locatedIn mdhn_data:Isfahan ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 ;
-    mdhn:sourcePageReference "Vol. 1, pp. 130, 322, 409, 412, 415-417, 437, 470, 496, 500, 507, 511, 559, 593, 639 (source spelling 'Zil-es-Sultan'; page-marked 1966 transcription)." .
-
-mdhn_data:AminAlSultan 
-    skos:altLabel "Mirza Ali Asghar Khan Amin al-Sultan"@en, "Atabak-e Azam"@en ;
-    rdfs:comment "Grand Vizier and dominant political figure during the later years of Naser al-Din Shah. Central to concession policy (including Reuter and later tobacco-related affairs) and the management of foreign relations with Britain and Russia. Curzon analyses his role in the court and the distribution of power."@en ;
-    mdhn:heldOffice "Grand Vizier / Amin al-Sultan" ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-# Additional local / provincial governors and officials
-mdhn_data:GovernorOfTabriz a mdhn:HistoricalPerson, mdhn:MilitaryLeader ;
-    rdfs:label "Governor of Tabriz / Azerbaijan"@en ;
-    rdfs:comment "The provincial governor of Azerbaijan (based in Tabriz), one of the most important commercial and strategic posts in Qajar Persia due to proximity to Russia and the Caucasian trade routes. Curzon discusses the Russian commercial and political influence operating through this governorship."@en ;
-    mdhn:locatedIn mdhn_data:Tabriz, mdhn_data:Azerbaijan ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:GovernorOfResht a mdhn:HistoricalPerson ;
-    rdfs:label "Governor of Resht / Gilan"@en ;
-    rdfs:comment "Provincial governor of Gilan, responsible for the Caspian littoral, the port of Enzeli/Resht, and the silk and transit trade with Russia. The post was sensitive because of Russian naval and commercial monopoly on the Caspian."@en ;
-    mdhn:locatedIn mdhn_data:Resht, mdhn_data:Gilan ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:GovernorOfShiraz a mdhn:HistoricalPerson ;
-    rdfs:label "Governor of Shiraz / Fars"@en ;
-    rdfs:comment "Provincial governor of Fars, overseeing Shiraz and the southern districts that controlled routes toward the Persian Gulf and the major Achaemenid and Sasanian sites. Curzon notes local administration and conditions during his journey through Fars."@en ;
-    mdhn:locatedIn mdhn_data:Shiraz, mdhn_data:Fars ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
-
-mdhn_data:GovernorOfKerman a mdhn:HistoricalPerson ;
-    rdfs:label "Governor of Kerman"@en ;
-    rdfs:comment "Governor of the southeastern province of Kerman, an important commercial centre linking central Persia with Seistan, Baluchistan, and the Gulf routes. Curzon discusses trade, industry (shawls, carpets), and the strategic position of the region."@en ;
-    mdhn:locatedIn mdhn_data:Kerman ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:GovernorOfHamadan a mdhn:HistoricalPerson ;
-    rdfs:label "Governor of Hamadan"@en ;
-    rdfs:comment "Local governor of Hamadan, a key station on the Baghdad–Tehran caravan and potential railway route. Curzon records observations on the town and its administration while travelling the western approaches."@en ;
-    mdhn:locatedIn mdhn_data:Hamadan ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-# Enrichments for places and monuments
-mdhn_data:Mashhad 
-    skos:altLabel "Meshed"@en, "Mashhad"@en ;
-    rdfs:comment "Capital of Khorasan and one of the holiest Shia cities in Persia (shrine of Imam Reza). Major pilgrimage centre, commercial hub for the northeast, and strategic point facing the Transcaspian Railway and Russian Central Asia. Curzon provides a detailed description of the city, shrine, administration under Rukn-ed-Dowleh, and the political atmosphere."@en .
-
-mdhn_data:Isfahan 
-    skos:altLabel "Ispahan"@en, "Isfahan"@en ;
-    rdfs:comment "Former Safavid capital. Curzon devotes substantial attention to its monuments (Si-o-se-pol, Khaju Bridge, Chehel Sotoun, etc.), its reduced political and economic status under Zell-e Soltan, and its role in central and southern Persia."@en .
-
-mdhn_data:Persepolis 
-    rdfs:comment "The great Achaemenid ceremonial capital (Takht-e Jamshid). Curzon's account in Volume 2 is one of the most detailed 19th-century European descriptions of the ruins, including the platform, palaces, reliefs, and their state of preservation."@en .
-
-mdhn_data:Resht 
-    skos:altLabel "Rasht"@en, "Resht"@en ;
-    rdfs:comment "Principal town and port of Gilan on the Caspian. Main northern gateway for Russian trade and the preferred starting point for any northern railway into Persia according to Curzon's analysis."@en .
-
-# Additional relations
-mdhn_data:RuknEdDowleh mdhn:participatedIn mdhn_data:TranscaspianRailwayImpact .
-mdhn_data:ZellESoltan mdhn:participatedIn mdhn_data:IsfahanDescriptionEvent .
-mdhn_data:GovernorOfTabriz mdhn:participatedIn mdhn_data:GreatGameCompetition .
-mdhn_data:GovernorOfResht mdhn:participatedIn mdhn_data:GreatGameCompetition .
-
-# ========== FURTHER EXPANSION: PERSONS, PROVINCIAL OFFICIALS, POLITICAL/SOCIAL/ECONOMIC/GEOGRAPHICAL ==========
-
-# Historical Qajar and earlier rulers
-mdhn_data:AghaMohammadKhan a mdhn:Monarch, mdhn:MilitaryLeader ;
-    rdfs:label "Agha Mohammad Khan Qajar"@en ;
-    skos:altLabel "Agha Mohammed Khan Kajar"@en ;
-    owl:sameAs wd:Q204645 ;
-    rdfs:comment "Founder of the Qajar dynasty; frequently referenced for the establishment of the dynasty and early 19th-century history."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 ;
-    mdhn:sourcePageReference "Vol. 1, pp. 151, 165, 187 (Curzon spelling variant; page-marked 1966 transcription)." .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mdhn:Office a rdfs:Class ;
+    rdfs:label "Administrative Office or Post"@en ;
+    rdfs:subClassOf mdhn:SpatialEntity .
+
+mdhn:hasPopulationEstimate a owl:DatatypeProperty ;
+    rdfs:label "has population estimate"@en ;
+    rdfs:domain mdhn:SpatialEntity ;
+    rdfs:range xsd:string .
+
+mdhn:hasRevenueEstimate a owl:DatatypeProperty ;
+    rdfs:label "has revenue estimate"@en ;
+    rdfs:domain mdhn:SpatialEntity ;
+    rdfs:range xsd:string .
+
+mdhn:holdsOffice a owl:ObjectProperty ;
+    rdfs:label "holds office"@en ;
+    rdfs:domain mdhn:HistoricalPerson ;
+    rdfs:range mdhn:Office .
+
+mdhn:identificationStatus a owl:DatatypeProperty ;
+    rdfs:label "identification status"@en ;
+    rdfs:comment "Values: named, role-only, inferred" ;
+    rdfs:domain owl:Thing ;
+    rdfs:range xsd:string .
+
+mdhn:metWith a owl:ObjectProperty ;
+    rdfs:label "met with / interviewed"@en ;
+    rdfs:domain mdhn:HistoricalPerson ;
+    rdfs:range mdhn:HistoricalPerson .
+
+mdhn:partOf a owl:ObjectProperty ;
+    rdfs:label "part of"@en ;
+    rdfs:domain mdhn:SpatialEntity ;
+    rdfs:range mdhn:SpatialEntity .
 
 mdhn_data:AbakaKhan a mdhn:HistoricalPerson ;
     rdfs:label "Abaka Khan"@en ;
@@ -478,6 +55,13 @@ mdhn_data:AbbasKuliKhan a mdhn:HistoricalPerson ;
     mdhn:describedInBook mdhn_data:CurzonVol1 ;
     mdhn:sourcePageReference "Vol. 1, p. 263 (page-marked 1966 transcription)." .
 
+mdhn_data:AbbasMirza a mdhn:MilitaryLeader ;
+    rdfs:label "Abbas Mirza"@en ;
+    rdfs:comment "Crown prince and military reformer under Fath-Ali Shah; key figure in the Russo-Persian wars."@en ;
+    owl:sameAs wd:Q307512 ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 42, 98, 100, 109, 159, 160, 192, 196, 272, 281, 288, 393, 394, 395, 398, 409, 412, 422, 437, 521, 522, 523, 524, 525, 528, 558, 576, 577, 578, 579, 580, 581, 582, 609, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
 mdhn_data:AbdurRahmanKhan a mdhn:HistoricalPerson ;
     rdfs:label "Abdur Rahman Khan"@en ;
     rdfs:comment "Afghan amir discussed by Curzon in relation to Afghanistan's policy toward Persia."@en ;
@@ -486,299 +70,480 @@ mdhn_data:AbdurRahmanKhan a mdhn:HistoricalPerson ;
 
 mdhn_data:AbdusSamedMirza a mdhn:HistoricalPerson ;
     rdfs:label "Abdus Samed Mirza"@en ;
-    skos:altLabel "Izz-ed-Dowleh"@en ;
     rdfs:comment "Qajar prince identified by Curzon as the Izz-ed-Dowleh and a former Minister of Justice."@en ;
+    skos:altLabel "Izz-ed-Dowleh"@en ;
     mdhn:describedInBook mdhn_data:CurzonVol1 ;
     mdhn:sourcePageReference "Vol. 1, p. 423 (page-marked 1966 transcription)." .
 
 mdhn_data:AbulHasanKhanGhaffari a mdhn:HistoricalPerson ;
     rdfs:label "Abul Hasan Khan Ghaffari"@en ;
-    skos:altLabel "Sani-el-Mulk"@en ;
     rdfs:comment "Artist whose paintings are noted by Curzon in his description of the Shah's palace."@en ;
+    skos:altLabel "Sani-el-Mulk"@en ;
     mdhn:describedInBook mdhn_data:CurzonVol1 ;
     mdhn:sourcePageReference "Vol. 1, p. 317 (page-marked 1966 transcription)." .
 
-mdhn_data:FathAliShah a mdhn:Monarch ;
-    rdfs:label "Fath-Ali Shah Qajar"@en ;
-    owl:sameAs wd:Q202076 ;
-    rdfs:comment "Second Qajar Shah; referenced in connection with early 19th-century wars with Russia and the loss of Caucasian territories."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
+mdhn_data:AghaMohammadKhan a mdhn:MilitaryLeader,
+        mdhn:Monarch ;
+    rdfs:label "Agha Mohammad Khan Qajar"@en ;
+    rdfs:comment "Founder of the Qajar dynasty; frequently referenced for the establishment of the dynasty and early 19th-century history."@en ;
+    owl:sameAs wd:Q204645 ;
+    skos:altLabel "Agha Mohammed Khan Kajar"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1, pp. 151, 165, 187 (Curzon spelling variant; page-marked 1966 transcription)." .
 
-mdhn_data:AbbasMirza a mdhn:MilitaryLeader ;
-    rdfs:label "Abbas Mirza"@en ;
-    owl:sameAs wd:Q307512 ;
-    rdfs:comment "Crown prince and military reformer under Fath-Ali Shah; key figure in the Russo-Persian wars."@en ;
+mdhn_data:AminAlSultan a mdhn:FinancialAdministrator ;
+    rdfs:label "Mirza Ali Asghar Khan Amin al-Sultan"@en ;
+    rdfs:comment "Grand Vizier and dominant political figure during the later years of Naser al-Din Shah. Central to concession policy (including Reuter and later tobacco-related affairs) and the management of foreign relations with Britain and Russia. Curzon analyses his role in the court and the distribution of power."@en,
+        "Powerful Qajar minister and multiple-time prime minister under Naser al-Din Shah; frequently discussed in context of court and concessions."@en ;
+    owl:sameAs wd:Q957636 ;
+    skos:altLabel "Amin al-Sultan"@en,
+        "Amin-e Soltan"@en,
+        "Atabak-e Azam"@en,
+        "Mirza Ali Asghar Khan Amin al-Sultan"@en,
+        "اتابک اعظم"@fa,
+        "میرزا علی‌اصغر خان امین‌السلطان"@fa ;
+    mdhn:describedInBook mdhn_data:Ch_ForeignPolicy,
+        mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:heldOffice "Grand Vizier / Amin al-Sultan" ;
+    mdhn:identificationStatus "named" ;
+    mdhn:participatedIn mdhn_data:QajarCourtPolitics,
+        mdhn_data:RussianEconomicDominance .
+
+mdhn_data:ArthurNicolson a mdhn:HistoricalPerson ;
+    rdfs:label "Sir Arthur Nicolson"@en ;
+    rdfs:comment "British diplomat; served in Tehran and was involved in Anglo-Persian relations during the period."@en ;
+    skos:altLabel "آرتور نیکلسون"@fa ;
     mdhn:describedInBook mdhn_data:CurzonVol1 .
 
-mdhn_data:MohammadShah a mdhn:Monarch ;
-    rdfs:label "Mohammad Shah Qajar"@en ;
-    owl:sameAs wd:Q204648 ;
-    rdfs:comment "Third Qajar Shah (1834–1848); referenced for the Herat campaigns and early Russian pressure."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
+mdhn_data:BaghdadTehranRoute a mdhn:RevolutionaryEvent ;
+    rdfs:label "Baghdad-Tehran Route and Proposed Railway"@en ;
+    rdfs:comment "Western land route via Kermanshah and Hamadan; merchandise and passenger traffic discussed."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:occurredAt mdhn_data:Hamadan,
+        mdhn_data:Tehran .
 
-# British and Russian officials / travellers mentioned
-mdhn_data:HenryRawlinson a mdhn:IntellectualOrator ;
-    rdfs:label "Sir Henry Rawlinson"@en ;
-    owl:sameAs wd:Q335302 ;
-    rdfs:comment "British soldier, diplomat and Orientalist; earlier traveller and political agent in Persia, frequently cited by Curzon."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
+mdhn_data:Baku a mdhn:City ;
+    rdfs:label "Baku"@en ;
+    rdfs:comment "Caspian oil port and Russian railhead; possible starting point for northern railways into Persia."@en ;
+    owl:sameAs wd:Q9248 ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 27, 28, 32, 56, 59, 61, 62, 65, 66, 67, 71, 72, 186, 187, 208, 359, 366, 373, 374, 466, 527, 617, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
 
-mdhn_data:FredericGoldsmid a mdhn:IntellectualOrator ;
-    rdfs:label "Sir Frederic Goldsmid"@en ;
-    rdfs:comment "British officer who led the Seistan Boundary Commission and wrote on eastern Persia; cited by Curzon."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:EdwardBrowne a mdhn:IntellectualOrator ;
-    rdfs:label "Edward Granville Browne"@en ;
-    owl:sameAs wd:Q1293375 ;
-    rdfs:comment "British Orientalist; Curzon references contemporary scholarly and political observations on Persia."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-# Additional provincial / local governors and officials
-mdhn_data:GovernorOfAstrabad a mdhn:HistoricalPerson ;
-    rdfs:label "Governor of Astrabad"@en ;
-    rdfs:comment "Governor of the Caspian province of Astrabad (modern Gorgan), a sensitive frontier facing Russian Turkmenia and the Transcaspian Railway. Curzon discusses its strategic position and local conditions."@en ;
-    mdhn:locatedIn mdhn_data:Astrabad ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:GovernorOfSeistan a mdhn:HistoricalPerson ;
-    rdfs:label "Governor of Seistan"@en ;
-    rdfs:comment "Local governor of the eastern border province of Seistan (Sistan). Important for Anglo-Russian boundary questions, trade routes toward India, and potential railway corridors."@en ;
-    mdhn:locatedIn mdhn_data:Seistan ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:GovernorOfBushire a mdhn:HistoricalPerson ;
-    rdfs:label "Governor of Bushire"@en ;
-    rdfs:comment "Local governor or political agent at the principal Persian Gulf port of Bushire, controlling customs, trade, and relations with the British residency."@en ;
-    mdhn:locatedIn mdhn_data:Bushire, mdhn_data:PersianGulf ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:GovernorOfMohammerah a mdhn:HistoricalPerson ;
-    rdfs:label "Governor / Sheikh of Mohammerah"@en ;
-    rdfs:comment "Local ruler or governor at Mohammerah (Khorramshahr) at the head of the Karun River; key figure for British trade concessions and southern access."@en ;
-    mdhn:locatedIn mdhn_data:Mohammerah, mdhn_data:KarunRiver ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
+mdhn_data:BaronJuliusDeReuter a mdhn:FinancialAdministrator ;
+    rdfs:label "Baron Julius de Reuter"@en ;
+    rdfs:comment "German-born British financier who received the comprehensive 1872 Reuter Concession."@en ;
+    skos:altLabel "Paul Julius Reuter"@en,
+        "بارون جولیوس دو رویتر"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Detailed analysis in railway and concession chapters of Vol. 1." .
 
 mdhn_data:BritishResidentGulf a mdhn:HistoricalPerson ;
     rdfs:label "British Resident in the Persian Gulf"@en ;
     rdfs:comment "The British political resident at Bushire or on the Gulf, representing British interests in southern Persia and the maritime frontier."@en ;
-    mdhn:locatedIn mdhn_data:Bushire, mdhn_data:PersianGulf ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:locatedIn mdhn_data:Bushire,
+        mdhn_data:PersianGulf ;
+    mdhn:participatedIn mdhn_data:BritishTradeSouth .
 
-mdhn_data:RussianConsulTabriz a mdhn:HistoricalPerson ;
-    rdfs:label "Russian Consul in Tabriz"@en ;
-    rdfs:comment "Russian consular representative in Tabriz, the main commercial centre of Azerbaijan and a focal point of Russian political and economic influence."@en ;
-    mdhn:locatedIn mdhn_data:Tabriz ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-# Additional places
-mdhn_data:Astrabad a mdhn:City ;
-    rdfs:label "Astrabad"@en ;
-    skos:altLabel "Astarabad"@en, "Gorgan"@en ;
-    owl:sameAs wd:Q170512 ;
-    rdfs:comment "Caspian province and town facing Russian Central Asia; strategically important in Curzon's analysis of the northern frontier."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:Enzeli a mdhn:City ;
-    rdfs:label "Enzeli"@en ;
-    skos:altLabel "Bandar-e Anzali"@en ;
-    rdfs:comment "Main Caspian port of Gilan; Russian-controlled landing place for trade and potential railway access."@en ;
-    mdhn:locatedIn mdhn_data:Gilan, mdhn_data:CaspianSea ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-# Thematic entities capturing political, social, economic, geographical conditions
-mdhn_data:QajarCourtPolitics a mdhn:PoliticalTransition ;
-    rdfs:label "Qajar Court Politics and Factionalism"@en ;
-    rdfs:comment "Description of the central court, the power of the Shah, the role of the Grand Vizier (Amin al-Sultan), provincial princes (Zell-e Soltan), and the distribution of offices and revenues."@en ;
-    mdhn:occurredAt mdhn_data:Tehran, mdhn_data:GolestanPalace ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:RussianEconomicDominance a mdhn:DiplomaticCrisis ;
-    rdfs:label "Russian Commercial and Economic Dominance in the North"@en ;
-    rdfs:comment "Russian monopoly of Caspian trade, control of the northern markets (Tabriz, Resht, Meshed), and the impact of the Transcaspian Railway on Persian commerce and politics."@en ;
-    mdhn:occurredAt mdhn_data:Tabriz, mdhn_data:Resht, mdhn_data:Mashhad, mdhn_data:CaspianSea ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:BritishTradeSouth a mdhn:RevolutionaryEvent ;
-    rdfs:label "British Trade and Political Interests in the South and Gulf"@en ;
-    rdfs:comment "British commercial activity via the Persian Gulf, Bushire, Mohammerah and the Karun River; the Resident's position; and competition with Russian influence."@en ;
-    mdhn:occurredAt mdhn_data:Bushire, mdhn_data:Mohammerah, mdhn_data:PersianGulf, mdhn_data:KarunRiver ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:GeographicalBarriers a mdhn:SpatialEntity ;
-    rdfs:label "Geographical Barriers to Communication and Development"@en ;
-    rdfs:comment "Curzon's detailed analysis of mountain ranges (Alborz, Zagros), deserts, climate, and the resulting difficulties of internal transport, which shaped both political control and railway possibilities."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:SocialConditionsProvinces a mdhn:RevolutionaryEvent ;
-    rdfs:label "Social and Administrative Conditions in the Provinces"@en ;
-    rdfs:comment "Observations on local governance, revenue extraction, the power of provincial governors, tribal groups, urban life, and the contrast between central authority and provincial realities."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-# Relations for new entities
-mdhn_data:GovernorOfAstrabad mdhn:participatedIn mdhn_data:GreatGameCompetition, mdhn_data:TranscaspianRailwayImpact .
-mdhn_data:GovernorOfSeistan mdhn:participatedIn mdhn_data:GreatGameCompetition .
-mdhn_data:GovernorOfBushire mdhn:participatedIn mdhn_data:BritishTradeSouth .
-mdhn_data:GovernorOfMohammerah mdhn:participatedIn mdhn_data:BritishTradeSouth .
-mdhn_data:BritishResidentGulf mdhn:participatedIn mdhn_data:BritishTradeSouth .
-mdhn_data:RussianConsulTabriz mdhn:participatedIn mdhn_data:RussianEconomicDominance .
-mdhn_data:NaserAlDinShah mdhn:participatedIn mdhn_data:QajarCourtPolitics .
-mdhn_data:AminAlSultan mdhn:participatedIn mdhn_data:QajarCourtPolitics, mdhn_data:RussianEconomicDominance .
-mdhn_data:ZellESoltan mdhn:participatedIn mdhn_data:QajarCourtPolitics, mdhn_data:SocialConditionsProvinces .
-
-# ========== FURTHER NAMED INDIVIDUALS + PERSIAN-SCRIPT LABELS ==========
-
-# Specific British / European agents and travellers
-mdhn_data:HoutumSchindler a mdhn:IntellectualOrator ;
-    rdfs:label "General Albert Houtum-Schindler"@en ;
-    skos:altLabel "هوتوم شیندلر"@fa, "General Schindler"@en ;
-    rdfs:comment "Austrian-born officer in Persian service and important informant for Curzon; provided detailed geographical, statistical, and administrative information on Persia."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:HenryDrummondWolff a mdhn:HistoricalPerson ;
-    rdfs:label "Sir Henry Drummond Wolff"@en ;
-    skos:altLabel "هنری دروموند ولف"@fa ;
-    rdfs:comment "British diplomat and special envoy; involved in Persian negotiations and referenced in the context of British policy."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:ArthurNicolson a mdhn:HistoricalPerson ;
-    rdfs:label "Sir Arthur Nicolson"@en ;
-    skos:altLabel "آرتور نیکلسون"@fa ;
-    rdfs:comment "British diplomat; served in Tehran and was involved in Anglo-Persian relations during the period."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-# Tribal and local leaders
-mdhn_data:SheikhUbeidullah a mdhn:ReligiousLeader, mdhn:MilitaryLeader ;
-    rdfs:label "Sheikh Ubeidullah of Nehri"@en ;
-    skos:altLabel "شیخ عبیدالله نهری"@fa, "Sheikh Obeidullah"@en ;
-    rdfs:comment "Kurdish Naqshbandi leader who led a major revolt in 1880 against Persian and Ottoman authority; frequently discussed in the context of Kurdish tribal power and border problems."@en ;
-    mdhn:locatedIn mdhn_data:Kurdistan ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:IlkhaniBakhtiari a mdhn:MilitaryLeader ;
-    rdfs:label "Ilkhani of the Bakhtiari"@en ;
-    skos:altLabel "ایلخانی بختیاری"@fa ;
-    rdfs:comment "Paramount chief of the Bakhtiari tribal confederation. Curzon describes the Bakhtiari as a major tribal power controlling strategic routes in the Zagros and influencing central and southern politics."@en ;
-    mdhn:locatedIn mdhn_data:Luristan ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:ValiOfArabistan a mdhn:MilitaryLeader ;
-    rdfs:label "Vali of Arabistan"@en ;
-    skos:altLabel "والی عربستان"@fa ;
-    rdfs:comment "Hereditary governor / Vali of Arabistan (Khuzistan), controlling the region around the Karun River and Mohammerah; important for British trade interests."@en ;
-    mdhn:locatedIn mdhn_data:Arabistan, mdhn_data:KarunRiver ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:TurkomanChiefs a mdhn:MilitaryLeader ;
-    rdfs:label "Turkoman Tribal Chiefs"@en ;
-    skos:altLabel "رؤسای ترکمن"@fa ;
-    rdfs:comment "Leaders of the Turkoman tribes on the northeastern frontier. Curzon analyses their raids, the Russian suppression of them, and the resulting change in the strategic situation of Khorasan."@en ;
-    mdhn:locatedIn mdhn_data:Khorasan, mdhn_data:Astrabad ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-# Additional places for tribal regions
-mdhn_data:Kurdistan a mdhn:SpatialEntity ;
-    rdfs:label "Kurdistan"@en ;
-    skos:altLabel "کردستان"@fa ;
-    rdfs:comment "Western frontier region inhabited by Kurdish tribes; scene of Sheikh Ubeidullah’s revolt and ongoing border issues with the Ottoman Empire."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:Luristan a mdhn:SpatialEntity ;
-    rdfs:label "Luristan"@en ;
-    skos:altLabel "لرستان"@fa ;
-    rdfs:comment "Zagros region dominated by Lur and Bakhtiari tribes; controls important passes between central Persia and the south-west."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-mdhn_data:Arabistan a mdhn:SpatialEntity ;
-    rdfs:label "Arabistan"@en ;
-    skos:altLabel "عربستان"@fa, "Khuzistan"@en ;
-    rdfs:comment "South-western province (modern Khuzistan) under the Vali; key area for the Karun River trade concession."@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
-
-# Persian-script enrichments for major existing entities
-mdhn_data:NaserAlDinShah skos:altLabel "ناصرالدین شاه قاجار"@fa .
-mdhn_data:AminAlSultan skos:altLabel "میرزا علی‌اصغر خان امین‌السلطان"@fa, "اتابک اعظم"@fa .
-mdhn_data:ZellESoltan skos:altLabel "ظل‌السلطان"@fa, "مسعود میرزا ظل‌السلطان"@fa .
-mdhn_data:RuknEdDowleh skos:altLabel "رکن‌الدوله"@fa .
-mdhn_data:BaronJuliusDeReuter skos:altLabel "بارون جولیوس دو رویتر"@fa .
-mdhn_data:NadirShah skos:altLabel "نادر شاه افشار"@fa .
-mdhn_data:GeorgeNathanielCurzon skos:altLabel "جرج ناتانیل کرزن"@fa .
-
-mdhn_data:Tehran skos:altLabel "تهران"@fa .
-mdhn_data:Tabriz skos:altLabel "تبریز"@fa .
-mdhn_data:Isfahan skos:altLabel "اصفهان"@fa .
-mdhn_data:Mashhad skos:altLabel "مشهد"@fa .
-mdhn_data:Shiraz skos:altLabel "شیراز"@fa .
-mdhn_data:Bushire skos:altLabel "بوشهر"@fa .
-mdhn_data:Resht skos:altLabel "رشت"@fa .
-mdhn_data:Kerman skos:altLabel "کرمان"@fa .
-mdhn_data:Hamadan skos:altLabel "همدان"@fa .
-mdhn_data:Persepolis skos:altLabel "تخت جمشید"@fa, "پرسپولیس"@fa .
-mdhn_data:GolestanPalace skos:altLabel "کاخ گلستان"@fa .
-mdhn_data:ImamRezaShrine skos:altLabel "حرم امام رضا"@fa .
-
-# Relations for new individuals
-mdhn_data:HoutumSchindler mdhn:participatedIn mdhn_data:CurzonTravelEvent .
-mdhn_data:SheikhUbeidullah mdhn:participatedIn mdhn_data:GreatGameCompetition .
-mdhn_data:IlkhaniBakhtiari mdhn:participatedIn mdhn_data:SocialConditionsProvinces .
-mdhn_data:ValiOfArabistan mdhn:participatedIn mdhn_data:BritishTradeSouth .
-mdhn_data:TurkomanChiefs mdhn:participatedIn mdhn_data:TranscaspianRailwayImpact, mdhn_data:GreatGameCompetition .
-
-# ========== ENRICHMENT LAYER: PROPERTIES, CHAPTERS, QUANTITATIVE DATA, RELATIONS ==========
-
-# New properties for finer relations and provenance
-mdhn:holdsOffice a owl:ObjectProperty ;
-    rdfs:label "holds office"@en ;
-    rdfs:domain mdhn:HistoricalPerson ;
-    rdfs:range mdhn:Office .
-
-mdhn:metWith a owl:ObjectProperty ;
-    rdfs:label "met with / interviewed"@en ;
-    rdfs:domain mdhn:HistoricalPerson ;
-    rdfs:range mdhn:HistoricalPerson .
-
-mdhn:identificationStatus a owl:DatatypeProperty ;
-    rdfs:label "identification status"@en ;
-    rdfs:domain owl:Thing ;
-    rdfs:range xsd:string ;
-    rdfs:comment "Values: named, role-only, inferred" .
-
-mdhn:partOf a owl:ObjectProperty ;
-    rdfs:label "part of"@en ;
-    rdfs:domain mdhn:SpatialEntity ;
-    rdfs:range mdhn:SpatialEntity .
-
-mdhn:hasPopulationEstimate a owl:DatatypeProperty ;
-    rdfs:label "has population estimate"@en ;
-    rdfs:domain mdhn:SpatialEntity ;
-    rdfs:range xsd:string .
-
-mdhn:hasRevenueEstimate a owl:DatatypeProperty ;
-    rdfs:label "has revenue estimate"@en ;
-    rdfs:domain mdhn:SpatialEntity ;
-    rdfs:range xsd:string .
-
-# Office class for cleaner governor modeling
-mdhn:Office a rdfs:Class ;
-    rdfs:label "Administrative Office or Post"@en ;
-    rdfs:subClassOf mdhn:SpatialEntity .
-
-# Approximate chapter skeleton (OCR-aware thematic chapters covering full structure)
 mdhn_data:Ch1_Introduction a mdhn:PrimarySourceBook ;
     rdfs:label "Chapter I: Introductory"@en ;
     mdhn:describedInBook mdhn_data:CurzonVol1 .
 
+mdhn_data:Ch3_From_London_to_Ashkabad a mdhn:PrimarySourceBook ;
+    rdfs:label "From London to Ashkabad (Vol. 1)"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 .
+
+mdhn_data:Ch4_Trans_Caspia a mdhn:PrimarySourceBook ;
+    rdfs:label "TRANSCASPIA"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 .
+
+mdhn_data:Ch5_From_Ashkabad_to_Kuchan a mdhn:PrimarySourceBook ;
+    rdfs:label "FROM ASHKABAD TO KUCHAN (Vol. 1)"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 .
+
+mdhn_data:ChehelSotoun a mdhn:MonumentOrBuilding ;
+    rdfs:label "Chehel Sotoun Palace"@en ;
+    rdfs:comment "Safavid palace in Isfahan."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol2 ;
+    mdhn:locatedIn mdhn_data:Isfahan .
+
+mdhn_data:EdwardBrowne a mdhn:IntellectualOrator ;
+    rdfs:label "Edward Granville Browne"@en ;
+    rdfs:comment "British Orientalist; Curzon references contemporary scholarly and political observations on Persia."@en ;
+    owl:sameAs wd:Q1293375 ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+mdhn_data:Enzeli a mdhn:City ;
+    rdfs:label "Enzeli"@en ;
+    rdfs:comment "Main Caspian port of Gilan; Russian-controlled landing place for trade and potential railway access."@en ;
+    skos:altLabel "Bandar-e Anzali"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:locatedIn mdhn_data:CaspianSea,
+        mdhn_data:Gilan ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 27, 28, 31, 183, 353, 360, 370, 375, 381, 385, 467, 472, 600, 620, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:EuphratesValleyRailway a mdhn:RevolutionaryEvent ;
+    rdfs:label "Euphrates Valley / Indo-Mediterranean Railway Schemes"@en ;
+    rdfs:comment "Historical proposals for a railway from the Mediterranean to the Persian Gulf, analysed and largely rejected by Curzon."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 .
+
+mdhn_data:FathAliShah a mdhn:Monarch ;
+    rdfs:label "Fath-Ali Shah Qajar"@en ;
+    rdfs:comment "Second Qajar Shah; referenced in connection with early 19th-century wars with Russia and the loss of Caucasian territories."@en ;
+    owl:sameAs wd:Q202076 ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+mdhn_data:FirstTravelToEurope a mdhn:TravelToEurope ;
+    rdfs:label "First Travel To Europe"@en ;
+    mdhn:basedOnEvidence mdhn_data:FirstTravelToEuropeEvidence ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:occuredOn mdhn:Temporal_1873 ;
+    mdhn:occuredAt mdhn_data:Europe;
+    mdhn:participatedIn mdhn_data:NaserAlDinShah .
+
+mdhn_data:FredericGoldsmid a mdhn:IntellectualOrator ;
+    rdfs:label "Sir Frederic Goldsmid"@en ;
+    rdfs:comment "British officer who led the Seistan Boundary Commission and wrote on eastern Persia; cited by Curzon."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+mdhn_data:GeographicalBarriers a mdhn:SpatialEntity ;
+    rdfs:label "Geographical Barriers to Communication and Development"@en ;
+    rdfs:comment "Curzon's detailed analysis of mountain ranges (Alborz, Zagros), deserts, climate, and the resulting difficulties of internal transport, which shaped both political control and railway possibilities."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+mdhn_data:GovernorOfAstrabad a mdhn:HistoricalPerson ;
+    rdfs:label "Governor of Astrabad"@en ;
+    rdfs:comment "Governor of the Caspian province of Astrabad (modern Gorgan), a sensitive frontier facing Russian Turkmenia and the Transcaspian Railway. Curzon discusses its strategic position and local conditions."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:identificationStatus "role-only" ;
+    mdhn:locatedIn mdhn_data:Astrabad ;
+    mdhn:participatedIn mdhn_data:GreatGameCompetition,
+        mdhn_data:TranscaspianRailwayImpact .
+
+mdhn_data:GovernorOfBushire a mdhn:HistoricalPerson ;
+    rdfs:label "Governor of Bushire"@en ;
+    rdfs:comment "Local governor or political agent at the principal Persian Gulf port of Bushire, controlling customs, trade, and relations with the British residency."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:locatedIn mdhn_data:Bushire,
+        mdhn_data:PersianGulf ;
+    mdhn:participatedIn mdhn_data:BritishTradeSouth .
+
+mdhn_data:GovernorOfHamadan a mdhn:HistoricalPerson ;
+    rdfs:label "Governor of Hamadan"@en ;
+    rdfs:comment "Local governor of Hamadan, a key station on the Baghdad–Tehran caravan and potential railway route. Curzon records observations on the town and its administration while travelling the western approaches."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:locatedIn mdhn_data:Hamadan ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 423; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:GovernorOfKerman a mdhn:HistoricalPerson ;
+    rdfs:label "Governor of Kerman"@en ;
+    rdfs:comment "Governor of the southeastern province of Kerman, an important commercial centre linking central Persia with Seistan, Baluchistan, and the Gulf routes. Curzon discusses trade, industry (shawls, carpets), and the strategic position of the region."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:locatedIn mdhn_data:Kerman .
+
+mdhn_data:GovernorOfMohammerah a mdhn:HistoricalPerson ;
+    rdfs:label "Governor / Sheikh of Mohammerah"@en ;
+    rdfs:comment "Local ruler or governor at Mohammerah (Khorramshahr) at the head of the Karun River; key figure for British trade concessions and southern access."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:locatedIn mdhn_data:KarunRiver,
+        mdhn_data:Mohammerah ;
+    mdhn:participatedIn mdhn_data:BritishTradeSouth .
+
+mdhn_data:GovernorOfResht a mdhn:HistoricalPerson ;
+    rdfs:label "Governor of Resht / Gilan"@en ;
+    rdfs:comment "Provincial governor of Gilan, responsible for the Caspian littoral, the port of Enzeli/Resht, and the silk and transit trade with Russia. The post was sensitive because of Russian naval and commercial monopoly on the Caspian."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:holdsOffice mdhn_data:OfficeGovernorGilan ;
+    mdhn:identificationStatus "role-only" ;
+    mdhn:locatedIn mdhn_data:Gilan,
+        mdhn_data:Resht ;
+    mdhn:participatedIn mdhn_data:GreatGameCompetition .
+
+mdhn_data:GovernorOfSeistan a mdhn:HistoricalPerson ;
+    rdfs:label "Governor of Seistan"@en ;
+    rdfs:comment "Local governor of the eastern border province of Seistan (Sistan). Important for Anglo-Russian boundary questions, trade routes toward India, and potential railway corridors."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:identificationStatus "role-only" ;
+    mdhn:locatedIn mdhn_data:Seistan ;
+    mdhn:participatedIn mdhn_data:GreatGameCompetition .
+
+mdhn_data:GovernorOfShiraz a mdhn:HistoricalPerson ;
+    rdfs:label "Governor of Shiraz / Fars"@en ;
+    rdfs:comment "Provincial governor of Fars, overseeing Shiraz and the southern districts that controlled routes toward the Persian Gulf and the major Achaemenid and Sasanian sites. Curzon notes local administration and conditions during his journey through Fars."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol2 ;
+    mdhn:locatedIn mdhn_data:Fars,
+        mdhn_data:Shiraz .
+
+mdhn_data:GovernorOfTabriz a mdhn:HistoricalPerson,
+        mdhn:MilitaryLeader ;
+    rdfs:label "Governor of Tabriz / Azerbaijan"@en ;
+    rdfs:comment "The provincial governor of Azerbaijan (based in Tabriz), one of the most important commercial and strategic posts in Qajar Persia due to proximity to Russia and the Caucasian trade routes. Curzon discusses the Russian commercial and political influence operating through this governorship."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:locatedIn mdhn_data:Azerbaijan,
+        mdhn_data:Tabriz ;
+    mdhn:participatedIn mdhn_data:GreatGameCompetition .
+
+mdhn_data:HenryDrummondWolff a mdhn:HistoricalPerson ;
+    rdfs:label "Sir Henry Drummond Wolff"@en ;
+    rdfs:comment "British diplomat and special envoy; involved in Persian negotiations and referenced in the context of British policy."@en ;
+    skos:altLabel "هنری دروموند ولف"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+mdhn_data:HenryRawlinson a mdhn:IntellectualOrator ;
+    rdfs:label "Sir Henry Rawlinson"@en ;
+    rdfs:comment "British soldier, diplomat and Orientalist; earlier traveller and political agent in Persia, frequently cited by Curzon."@en ;
+    owl:sameAs wd:Q335302 ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 552; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:Herat a mdhn:City ;
+    rdfs:label "Herat"@en ;
+    rdfs:comment "Afghan city of strategic importance; Russian and British interest in the Great Game context."@en ;
+    owl:sameAs wd:Q45313 ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 8, 46, 76, 80, 90, 101, 106, 115, 161, 173, 175, 180, 187, 188, 197, 198, 201, 203, 210, 217, 222, 226, 229, 230, 234, 236, 240, 241, 242, 282, 288, 291, 353, 422, 513, 525, 582, 584, 607, 626, 627, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:HoutumSchindler a mdhn:IntellectualOrator ;
+    rdfs:label "General Albert Houtum-Schindler"@en ;
+    rdfs:comment "Austrian-born officer in Persian service and important informant for Curzon; provided detailed geographical, statistical, and administrative information on Persia."@en ;
+    skos:altLabel "General Schindler"@en,
+        "هوتوم شیندلر"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:identificationStatus "named" ;
+    mdhn:participatedIn mdhn_data:CurzonTravelEvent ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 266, 344, 517, 521; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:IlkhaniBakhtiari a mdhn:MilitaryLeader ;
+    rdfs:label "Ilkhani of the Bakhtiari"@en ;
+    rdfs:comment "Paramount chief of the Bakhtiari tribal confederation. Curzon describes the Bakhtiari as a major tribal power controlling strategic routes in the Zagros and influencing central and southern politics."@en ;
+    skos:altLabel "ایلخانی بختیاری"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:identificationStatus "role-only" ;
+    mdhn:locatedIn mdhn_data:Luristan ;
+    mdhn:participatedIn mdhn_data:SocialConditionsProvinces .
+
+mdhn_data:ImamRezaShrine a mdhn:MonumentOrBuilding ;
+    rdfs:label "Imam Reza Shrine"@en ;
+    rdfs:comment "Major Shi'a sanctuary in Mashhad; focal point of pilgrimage and local economy."@en ;
+    skos:altLabel "Meshed Shrine"@en,
+        "Shrine of Imam Riza"@en,
+        "حرم امام رضا"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:locatedIn mdhn_data:Mashhad .
+
+mdhn_data:J_J_Fahie a mdhn:HistoricalPerson ;
+    rdfs:label "J. J. Fahie,"@en ;
+    rdfs:comment "Assistant Superintendent of the Indo-European Telegraph at Shiraz;"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:locatedIn mdhn_data:Fars,
+        mdhn_data:Shiraz .
+
+mdhn_data:Kazvin a mdhn:City ;
+    rdfs:label "Kazvin"@en ;
+    rdfs:comment "Town on the route from Resht/Tabriz to Tehran."@en ;
+    owl:sameAs wd:Q131322 ;
+    skos:altLabel "Qazvin"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 31, 32, 35, 36, 37, 38, 39, 41, 42, 289, 387, 422, 431, 437, 466, 467, 486, 488, 528, 570, 593, 600, 601, 619, 625, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:KhajuBridge a mdhn:MonumentOrBuilding ;
+    rdfs:label "Khaju Bridge"@en ;
+    rdfs:comment "Safavid bridge in Isfahan."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol2 ;
+    mdhn:locatedIn mdhn_data:Isfahan .
+
+mdhn_data:Maragha a mdhn:City ;
+    rdfs:label "Maragha"@en ;
+    rdfs:comment "Historic city in Azerbaijan; described for its architecture and historical significance."@en ;
+    owl:sameAs wd:Q121157 ;
+    skos:altLabel "Maragha"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+mdhn_data:MohammadShah a mdhn:Monarch ;
+    rdfs:label "Mohammad Shah Qajar"@en ;
+    rdfs:comment "Third Qajar Shah (1834–1848); referenced for the Herat campaigns and early Russian pressure."@en ;
+    owl:sameAs wd:Q204648 ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+mdhn_data:NadirShah a mdhn:MilitaryLeader,
+        mdhn:Monarch ;
+    rdfs:label "Nadir Shah"@en ;
+    rdfs:comment "Afsharid ruler; frequently referenced for historical conquests, Meshed, and ruins."@en ;
+    owl:sameAs wd:Q19224 ;
+    skos:altLabel "Nader Shah Afshar"@en,
+        "نادر شاه افشار"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 6, 20, 98, 109, 110, 115, 128, 133, 135, 136, 146, 150, 156, 157, 158, 162, 165, 192, 193, 204, 229, 263, 271, 279, 288, 308, 317, 320, 321, 357, 370, 375, 377, 405, 435, 453, 471, 505, 512, 558, 572, 575, 576, 593, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan.",
+        "Vol. 1, p. 375 (possessive mention 'Nadir Shah's'; page-marked 1966 transcription)." .
+
+mdhn_data:RailwayProjectsEvent a mdhn:RevolutionaryEvent ;
+    rdfs:label "Proposed Railway Concessions and Routes in Persia"@en ;
+    rdfs:comment "Extensive analysis of possible railway lines from the north (Caucasus/Caspian), south (Persian Gulf), east (India/Seistan), and west (Baghdad); strategic and commercial implications."@en ;
+    mdhn:describedInBook mdhn_data:Ch2_Routes,
+        mdhn_data:Ch_ForeignPolicy,
+        mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:occurredAt mdhn_data:Bushire,
+        mdhn_data:Tabriz,
+        mdhn_data:Tehran ;
+    mdhn:sourcePageReference "Chapter on Railways (Vol. 1) and related discussions of routes and strategic competition." .
+
+mdhn_data:RussianConsulTabriz a mdhn:HistoricalPerson ;
+    rdfs:label "Russian Consul in Tabriz"@en ;
+    rdfs:comment "Russian consular representative in Tabriz, the main commercial centre of Azerbaijan and a focal point of Russian political and economic influence."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:locatedIn mdhn_data:Tabriz ;
+    mdhn:participatedIn mdhn_data:RussianEconomicDominance .
+
+mdhn_data:SecondTravelToEurope a mdhn:TravelToEurope ;
+    rdfs:label "Second Travel To Europe"@en ;
+    mdhn:basedOnEvidence mdhn_data:SecondTravelToEuropeEvidence ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:occuredOn mdhn:Temporal_1889 ;
+    mdhn:occuredAt mdhn_data:Europe;
+    mdhn:participatedIn mdhn_data:NaserAlDinShah, mdhn_data:AminAlSultan .
+
+mdhn_data:SiOSePol a mdhn:MonumentOrBuilding ;
+    rdfs:label "Si-o-se-pol Bridge"@en ;
+    rdfs:comment "Famous Safavid bridge in Isfahan."@en ;
+    skos:altLabel "Bridge of Allahverdi Khan"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol2 ;
+    mdhn:locatedIn mdhn_data:Isfahan .
+
+mdhn_data:Tiflis a mdhn:City ;
+    rdfs:label "Tiflis"@en ;
+    rdfs:comment "Caucasian capital; route via Erivan/Julfa to Tabriz."@en ;
+    owl:sameAs wd:Q994 ;
+    skos:altLabel "Tbilisi"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 27, 40, 54, 61, 63, 64, 65, 66, 84, 466, 527, 615, 625, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:TurkomanChiefs a mdhn:MilitaryLeader ;
+    rdfs:label "Turkoman Tribal Chiefs"@en ;
+    rdfs:comment "Leaders of the Turkoman tribes on the northeastern frontier. Curzon analyses their raids, the Russian suppression of them, and the resulting change in the strategic situation of Khorasan."@en ;
+    skos:altLabel "رؤسای ترکمن"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:locatedIn mdhn_data:Astrabad,
+        mdhn_data:Khorasan ;
+    mdhn:participatedIn mdhn_data:GreatGameCompetition,
+        mdhn_data:TranscaspianRailwayImpact .
+
+mdhn_data:Urumiah a mdhn:City ;
+    rdfs:label "Urumiah"@en ;
+    rdfs:comment "Historic city in Azerbaijan; described for its architecture and historical significance."@en ;
+    owl:sameAs wd:Q121157 ;
+    skos:altLabel "Urumiah"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+mdhn_data:ValiOfArabistan a mdhn:MilitaryLeader ;
+    rdfs:label "Vali of Arabistan"@en ;
+    rdfs:comment "Hereditary governor / Vali of Arabistan (Khuzistan), controlling the region around the Karun River and Mohammerah; important for British trade interests."@en ;
+    skos:altLabel "والی عربستان"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:identificationStatus "role-only" ;
+    mdhn:locatedIn mdhn_data:Arabistan,
+        mdhn_data:KarunRiver ;
+    mdhn:participatedIn mdhn_data:BritishTradeSouth .
+
+mdhn_data:Vol1Themes a mdhn:RevolutionaryEvent ;
+    rdfs:label "Volume 1 Themes: Routes, Journey, Khorasan, Northern and Western Approaches"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 .
+
+mdhn_data:Vol2Themes a mdhn:RevolutionaryEvent ;
+    rdfs:label "Volume 2 Themes: Southern Provinces, Antiquities, Gulf, Trade, Foreign Policy, Railways"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol2 .
+
+mdhn_data:ZellESoltan a mdhn:MilitaryLeader ;
+    rdfs:label "Zell-e Soltan"@en ;
+    rdfs:comment "Powerful Qajar prince (son of Naser al-Din Shah), Governor of Isfahan and de facto ruler of much of southern and central Persia. Maintained a large private army and was a major political rival. Curzon discusses his position, court, and the economic and political conditions of the regions under his control."@en,
+        "Powerful Qajar prince, governor of Isfahan and southern provinces; rival of the Shah."@en ;
+    skos:altLabel "Mas'ud Mirza Zell-e Soltan"@en,
+        "Zell-es-Soltan"@en,
+        "Zil-es-Sultan"@en,
+        "Zill-es-Sultan"@en,
+        "ظل‌السلطان"@fa,
+        "مسعود میرزا ظل‌السلطان"@fa ;
+    mdhn:describedInBook mdhn_data:Ch_IsfahanShiraz,
+        mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:heldOffice "Governor of Isfahan and southern provinces" ;
+    mdhn:holdsOffice mdhn_data:OfficeGovernorIsfahan ;
+    mdhn:identificationStatus "named" ;
+    mdhn:locatedIn mdhn_data:Isfahan ;
+    mdhn:participatedIn mdhn_data:IsfahanDescriptionEvent,
+        mdhn_data:QajarCourtPolitics,
+        mdhn_data:SocialConditionsProvinces ;
+    mdhn:sourcePageReference "Vol. 1, pp. 130, 322, 409, 412, 415-417, 437, 470, 496, 500, 507, 511, 559, 593, 639 (source spelling 'Zil-es-Sultan'; page-marked 1966 transcription)." .
+
+mdhn:Temporal_1873 a mdhn:TemporalEntity ;
+    rdfs:label "Gregorian 1873"@en ;
+    mdhn:gregorianDate "1873-09-01"^^xsd:date .
+
+mdhn:Temporal_1889 a mdhn:TemporalEntity ;
+    rdfs:label "Gregorian 1889"@en ;
+    mdhn:gregorianDate "1889-09-01"^^xsd:date .
+
+mdhn_data:AntiquitiesFarsEvent a mdhn:RevolutionaryEvent ;
+    rdfs:label "Examination of Achaemenid and Sasanian Remains in Fars"@en ;
+    rdfs:comment "Persepolis, Naqsh-e Rostam, Pasargadae, and related sites (Vol. 2)."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol2 ;
+    mdhn:occurredAt mdhn_data:NaqshERostam,
+        mdhn_data:Pasargadae,
+        mdhn_data:Persepolis .
+
+mdhn_data:Europe a mdhn:SpatialEntity ;
+    rdfs:label "Europe"@en ;
+    rdfs:comment "Continent of Europe."@en ;
+    skos:altLabel "Europe"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+
+mdhn_data:Arabistan a mdhn:SpatialEntity ;
+    rdfs:label "Arabistan"@en ;
+    rdfs:comment "South-western province (modern Khuzistan) under the Vali; key area for the Karun River trade concession."@en ;
+    skos:altLabel "Khuzistan"@en,
+        "عربستان"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 416, 437, 485, 593, 601, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan.",
+        "Vol. 1 printed pages 583, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:Ashkabad a mdhn:City ;
+    rdfs:label "Ashkabad"@en ;
+    rdfs:comment "Transcaspian Railway terminus; Russian base near Persian border."@en ;
+    owl:sameAs wd:Q1327 ;
+    skos:altLabel "Ashgabat"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 45, 69, 78, 85, 87, 88, 89, 91, 93, 110, 120, 125, 175, 188, 193, 204, 211, 212, 214, 217, 276, 282, 408, 487, 627, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
 mdhn_data:Ch2_Routes a mdhn:PrimarySourceBook ;
     rdfs:label "Chapter II: Ways and Means / Routes into Persia"@en ;
     mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:Ch_Khorasan a mdhn:PrimarySourceBook ;
-    rdfs:label "Khorasan and Meshed chapters (Vol. 1)"@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1 .
-
-mdhn_data:Ch_IsfahanShiraz a mdhn:PrimarySourceBook ;
-    rdfs:label "Isfahan to Shiraz and Fars chapters (Vol. 2)"@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol2 .
 
 mdhn_data:Ch_Antiquities a mdhn:PrimarySourceBook ;
     rdfs:label "Antiquities of Fars (Persepolis, Pasargadae, etc.)"@en ;
@@ -786,148 +551,459 @@ mdhn_data:Ch_Antiquities a mdhn:PrimarySourceBook ;
 
 mdhn_data:Ch_GulfTrade a mdhn:PrimarySourceBook ;
     rdfs:label "Persian Gulf, Trade, and Southern Routes"@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
 
-mdhn_data:Ch_ForeignPolicy a mdhn:PrimarySourceBook ;
-    rdfs:label "Foreign Policy, Anglo-Russian Rivalry, Railways"@en ;
-    mdhn:describedInBook mdhn_data:CurzonVol1, mdhn_data:CurzonVol2 .
+mdhn_data:CurzonJourney1889 a mdhn:TemporalEntity ;
+    rdfs:label "Curzon's Journey to Persia 1889–1890"@en ;
+    rdfs:comment "Approximate period of Curzon's six-month travels as Times correspondent."@en ;
+    mdhn:gregorianDate "1889-09-01"^^xsd:date .
 
-# Sample Offices
-mdhn_data:OfficeGovernorKhorasan a mdhn:Office ;
-    rdfs:label "Governor-General of Khorasan"@en ;
-    mdhn:locatedIn mdhn_data:Khorasan ;
-    skos:altLabel "حکومت خراسان"@fa .
+mdhn_data:FirstTravelToEuropeEvidence a mdhn:EvidenceReference ;
+    mdhn:chapterNumber 3 ;
+    mdhn:pageNumber 14 .
 
-mdhn_data:OfficeGovernorIsfahan a mdhn:Office ;
-    rdfs:label "Governor of Isfahan and Southern Provinces"@en ;
-    mdhn:locatedIn mdhn_data:Isfahan ;
-    skos:altLabel "حکومت اصفهان"@fa .
+mdhn_data:GolestanPalace a mdhn:MonumentOrBuilding ;
+    rdfs:label "Golestan Palace"@en ;
+    rdfs:comment "Qajar royal complex in Tehran; seat of the Shah and centre of court life."@en ;
+    skos:altLabel "کاخ گلستان"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:locatedIn mdhn_data:Tehran .
+
+mdhn_data:Kerman a mdhn:City ;
+    rdfs:label "Kerman"@en ;
+    rdfs:comment "Southeastern commercial and industrial centre; linked to Seistan and Gulf routes."@en ;
+    owl:sameAs wd:Q170491 ;
+    skos:altLabel "کرمان"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:partOf mdhn_data:Khorasan ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 46, 178, 199, 208, 210, 211, 212, 215, 222, 228, 235, 244, 324, 333, 369, 375, 406, 437, 466, 468, 472, 488, 513, 528, 558, 582, 593, 600, 601, 628, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:Luristan a mdhn:SpatialEntity ;
+    rdfs:label "Luristan"@en ;
+    rdfs:comment "Zagros region dominated by Lur and Bakhtiari tribes; controls important passes between central Persia and the south-west."@en ;
+    skos:altLabel "لرستان"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 416, 436, 437, 549, 557, 570, 583, 593, 600, 601, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:NaqshERostam a mdhn:MonumentOrBuilding ;
+    rdfs:label "Naqsh-e Rostam"@en ;
+    rdfs:comment "Sasanian and Achaemenid rock reliefs and tombs near Persepolis."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol2 .
 
 mdhn_data:OfficeGovernorGilan a mdhn:Office ;
     rdfs:label "Governor of Gilan / Resht"@en ;
     mdhn:locatedIn mdhn_data:Gilan .
 
-# Quantitative pilot data (drawn from Curzon’s typical figures; approximate where OCR obscures exact wording)
-mdhn_data:Mashhad mdhn:hasPopulationEstimate "c. 60,000–80,000 (including pilgrims seasonally higher)" ;
-    mdhn:hasRevenueEstimate "Significant pilgrimage and trade revenues; provincial surplus discussed" ;
-    mdhn:partOf mdhn_data:Khorasan ;
-    mdhn:identificationStatus "named" .
+mdhn_data:OfficeGovernorIsfahan a mdhn:Office ;
+    rdfs:label "Governor of Isfahan and Southern Provinces"@en ;
+    skos:altLabel "حکومت اصفهان"@fa ;
+    mdhn:locatedIn mdhn_data:Isfahan .
 
-mdhn_data:Tabriz mdhn:hasPopulationEstimate "c. 150,000–200,000 (major commercial centre)" ;
-    mdhn:partOf mdhn_data:Azerbaijan ;
-    mdhn:identificationStatus "named" .
+mdhn_data:OfficeGovernorKhorasan a mdhn:Office ;
+    rdfs:label "Governor-General of Khorasan"@en ;
+    skos:altLabel "حکومت خراسان"@fa ;
+    mdhn:locatedIn mdhn_data:Khorasan ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 88, 101, 112, 160, 163, 168, 258, 423, 431, 612; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
 
-mdhn_data:Tehran mdhn:hasPopulationEstimate "c. 150,000–200,000" ;
-    mdhn:identificationStatus "named" .
+mdhn_data:Pasargadae a mdhn:MonumentOrBuilding ;
+    rdfs:label "Pasargadae / Tomb of Cyrus"@en ;
+    rdfs:comment "Site of Cyrus's tomb; visited and described by Curzon."@en ;
+    owl:sameAs wd:Q193704 ;
+    mdhn:describedInBook mdhn_data:CurzonVol2 .
 
-mdhn_data:Isfahan mdhn:hasPopulationEstimate "Greatly reduced from Safavid peak; c. 50,000–80,000 range in Curzon’s time" ;
-    mdhn:partOf mdhn_data:Fars ;
-    mdhn:identificationStatus "named" .
+mdhn_data:Persepolis a mdhn:MonumentOrBuilding ;
+    rdfs:label "Persepolis"@en ;
+    rdfs:comment "Achaemenid ruins extensively described in Vol. 2 antiquities chapters."@en,
+        "The great Achaemenid ceremonial capital (Takht-e Jamshid). Curzon's account in Volume 2 is one of the most detailed 19th-century European descriptions of the ruins, including the platform, palaces, reliefs, and their state of preservation."@en ;
+    owl:sameAs wd:Q129072 ;
+    skos:altLabel "تخت جمشید"@fa,
+        "پرسپولیس"@fa ;
+    mdhn:describedInBook mdhn_data:Ch_Antiquities,
+        mdhn_data:CurzonVol2 ;
+    mdhn:locatedIn mdhn_data:Fars ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 10, 19, 312, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
 
-mdhn_data:Resht mdhn:hasPopulationEstimate "Principal Caspian commercial town" ;
-    mdhn:partOf mdhn_data:Gilan ;
-    mdhn:identificationStatus "named" .
+mdhn_data:ReuterConcessionDoc a mdhn:DocumentOrConcession ;
+    rdfs:label "Reuter Concession of 1872"@en ;
+    rdfs:comment "Comprehensive industrial, railway, mining, and customs monopoly granted to Baron de Reuter and later revoked."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:signedDocument mdhn_data:NaserAlDinShah .
 
-# Better relations and status for agents
-mdhn_data:RuknEdDowleh 
+mdhn_data:ReuterConcessionEvent a mdhn:DiplomaticCrisis ;
+    rdfs:label "Grant and Cancellation of the Reuter Concession"@en ;
+    rdfs:comment "1872 comprehensive monopoly concession to Baron Julius de Reuter; cancelled under Russian and domestic pressure. Extensively analysed by Curzon."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:hasTemporalAnchor mdhn_data:ReuterConcession1872 ;
+    mdhn:initiatedBy mdhn_data:NaserAlDinShah ;
+    mdhn:sourcePageReference "Detailed discussion of the Reuter Concession and its implications for railway and industrial policy." .
+
+mdhn_data:RuknEdDowleh a mdhn:HistoricalPerson ;
+    rdfs:label "Rukn-ed-Dowleh"@en ;
+    rdfs:comment "Governor of Khorasan / Meshed region encountered by Curzon."@en,
+        "Qajar prince and Governor-General of Khorasan (including Meshed) at the time of Curzon's visit (c. 1889). Brother of Naser al-Din Shah. Curzon records an interview with him and describes the local administration and garrison under his authority."@en ;
+    skos:altLabel "Rukn al-Dawla"@en,
+        "Rukn-ed-Dowleh"@en,
+        "رکن‌الدوله"@fa ;
+    mdhn:describedInBook mdhn_data:Ch_Khorasan,
+        mdhn_data:CurzonVol1 ;
+    mdhn:heldOffice "Governor-General of Khorasan" ;
     mdhn:holdsOffice mdhn_data:OfficeGovernorKhorasan ;
+    mdhn:identificationStatus "named" ;
+    mdhn:locatedIn mdhn_data:Khorasan,
+        mdhn_data:Mashhad ;
     mdhn:metWith mdhn_data:GeorgeNathanielCurzon ;
+    mdhn:participatedIn mdhn_data:TranscaspianRailwayImpact ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 163, 168, 204, 395, 423, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:SecondTravelToEuropeEvidence a mdhn:EvidenceReference ;
+    mdhn:chapterNumber 4 ;
+    mdhn:pageNumber 21 .
+
+mdhn_data:Seistan a mdhn:SpatialEntity ;
+    rdfs:label "Seistan"@en ;
+    rdfs:comment "Eastern border region; potential railway and trade corridor to India/Baluchistan."@en ;
+    skos:altLabel "Sistan"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 238, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan.",
+        "Vol. 1 printed pages 8, 175, 200, 201, 202, 203, 204, 216, 217, 218, 222, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 241, 242, 243, 244, 265, 276, 372, 375, 406, 437, 472, 602, 628, 629, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:SheikhUbeidullah a mdhn:MilitaryLeader,
+        mdhn:ReligiousLeader ;
+    rdfs:label "Sheikh Ubeidullah of Nehri"@en ;
+    rdfs:comment "Kurdish Naqshbandi leader who led a major revolt in 1880 against Persian and Ottoman authority; frequently discussed in the context of Kurdish tribal power and border problems."@en ;
+    skos:altLabel "Sheikh Obeidullah"@en,
+        "شیخ عبیدالله نهری"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
     mdhn:identificationStatus "named" ;
-    mdhn:describedInBook mdhn_data:Ch_Khorasan .
+    mdhn:locatedIn mdhn_data:Kurdistan ;
+    mdhn:participatedIn mdhn_data:GreatGameCompetition,
+        mdhn_data:SheikhUbeidullahRevolt ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 536, 553; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
 
-mdhn_data:ZellESoltan 
-    mdhn:holdsOffice mdhn_data:OfficeGovernorIsfahan ;
-    mdhn:identificationStatus "named" ;
-    mdhn:describedInBook mdhn_data:Ch_IsfahanShiraz .
-
-mdhn_data:AminAlSultan 
-    mdhn:identificationStatus "named" ;
-    mdhn:describedInBook mdhn_data:Ch_ForeignPolicy .
-
-mdhn_data:GeorgeNathanielCurzon 
-    mdhn:metWith mdhn_data:RuknEdDowleh ;
-    mdhn:identificationStatus "named" .
-
-mdhn_data:GovernorOfResht 
-    mdhn:holdsOffice mdhn_data:OfficeGovernorGilan ;
-    mdhn:identificationStatus "role-only" .
-
-mdhn_data:GovernorOfAstrabad mdhn:identificationStatus "role-only" .
-mdhn_data:GovernorOfSeistan mdhn:identificationStatus "role-only" .
-mdhn_data:IlkhaniBakhtiari mdhn:identificationStatus "role-only" .
-mdhn_data:ValiOfArabistan mdhn:identificationStatus "role-only" .
-mdhn_data:SheikhUbeidullah mdhn:identificationStatus "named" .
-mdhn_data:HoutumSchindler mdhn:identificationStatus "named" .
-
-# Link major places and events to chapters
-mdhn_data:Mashhad mdhn:describedInBook mdhn_data:Ch_Khorasan .
-mdhn_data:Persepolis mdhn:describedInBook mdhn_data:Ch_Antiquities .
-mdhn_data:Isfahan mdhn:describedInBook mdhn_data:Ch_IsfahanShiraz .
-mdhn_data:Bushire mdhn:describedInBook mdhn_data:Ch_GulfTrade .
-mdhn_data:GreatGameCompetition mdhn:describedInBook mdhn_data:Ch_ForeignPolicy .
-mdhn_data:RailwayProjectsEvent mdhn:describedInBook mdhn_data:Ch_ForeignPolicy, mdhn_data:Ch2_Routes .
-mdhn_data:TranscaspianRailwayImpact mdhn:describedInBook mdhn_data:Ch_Khorasan, mdhn_data:Ch_ForeignPolicy .
-
-# Spatial hierarchy strengthening
-mdhn_data:Resht mdhn:partOf mdhn_data:Gilan .
-mdhn_data:Tabriz mdhn:partOf mdhn_data:Azerbaijan .
-mdhn_data:Shiraz mdhn:partOf mdhn_data:Fars .
-mdhn_data:Kerman mdhn:partOf mdhn_data:Khorasan .  # approximate regional link
-mdhn_data:Astrabad mdhn:partOf mdhn_data:Gilan .  # Caspian littoral grouping
-
-# Additional precise temporal notes
 mdhn_data:SheikhUbeidullahRevolt a mdhn:ConflictEvent ;
     rdfs:label "Sheikh Ubeidullah Revolt 1880"@en ;
+    rdfs:comment "Major Kurdish uprising against Persian authority; discussed by Curzon in border and tribal context."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
     mdhn:gregorianDate "1880-01-01"^^xsd:date ;
     mdhn:initiatedBy mdhn_data:SheikhUbeidullah ;
-    mdhn:occurredAt mdhn_data:Kurdistan ;
+    mdhn:occurredAt mdhn_data:Kurdistan .
+
+mdhn_data:TobaccoConcessionEvent a mdhn:DiplomaticCrisis,
+        mdhn:Protest ;
+    rdfs:label "Tobacco Concession and Protest (1890-1892)"@en ;
+    rdfs:comment "Monopoly granted to British company; popular and clerical resistance; context for Curzon's analysis of concessions."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:hasTemporalAnchor mdhn_data:ReuterConcession1872 ;
+    mdhn:initiatedBy mdhn_data:NaserAlDinShah .
+
+mdhn_data:Astrabad a mdhn:City ;
+    rdfs:label "Astrabad"@en ;
+    rdfs:comment "Caspian province and town facing Russian Central Asia; strategically important in Curzon's analysis of the northern frontier."@en ;
+    owl:sameAs wd:Q170512 ;
+    skos:altLabel "Astarabad"@en,
+        "Gorgan"@en ;
     mdhn:describedInBook mdhn_data:CurzonVol1 ;
-    rdfs:comment "Major Kurdish uprising against Persian authority; discussed by Curzon in border and tribal context."@en .
+    mdhn:partOf mdhn_data:Gilan ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 32, 44, 45, 76, 90, 98, 120, 167, 182, 183, 185, 186, 187, 188, 189, 190, 191, 201, 204, 269, 282, 294, 303, 353, 355, 356, 357, 358, 359, 360, 365, 374, 375, 376, 378, 379, 388, 392, 437, 467, 472, 593, 596, 600, 601, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
 
-mdhn_data:SheikhUbeidullah mdhn:participatedIn mdhn_data:SheikhUbeidullahRevolt .
+mdhn_data:Azerbaijan a mdhn:SpatialEntity ;
+    rdfs:label "Azerbaijan"@en ;
+    rdfs:comment "Northwestern province; Tabriz as commercial capital, Russian influence."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 42, 57, 169, 204, 333, 369, 386, 393, 396, 397, 413, 415, 431, 435, 437, 490, 506, 513, 515, 516, 517, 523, 524, 525, 526, 527, 528, 530, 532, 534, 536, 542, 546, 548, 554, 556, 576, 577, 578, 579, 581, 583, 593, 600, 601, 607, 612, 622, 625, 630, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
 
-# BEGIN generated exact-label page references
-mdhn_data:AbbasMirza mdhn:sourcePageReference "Vol. 1 printed pages 42, 98, 100, 109, 159, 160, 192, 196, 272, 281, 288, 393, 394, 395, 398, 409, 412, 422, 437, 521, 522, 523, 524, 525, 528, 558, 576, 577, 578, 579, 580, 581, 582, 609, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Arabistan mdhn:sourcePageReference "Vol. 1 printed pages 416, 437, 485, 593, 601, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Ashkabad mdhn:sourcePageReference "Vol. 1 printed pages 45, 69, 78, 85, 87, 88, 89, 91, 93, 110, 120, 125, 175, 188, 193, 204, 211, 212, 214, 217, 276, 282, 408, 487, 627, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Astrabad mdhn:sourcePageReference "Vol. 1 printed pages 32, 44, 45, 76, 90, 98, 120, 167, 182, 183, 185, 186, 187, 188, 189, 190, 191, 201, 204, 269, 282, 294, 303, 353, 355, 356, 357, 358, 359, 360, 365, 374, 375, 376, 378, 379, 388, 392, 437, 467, 472, 593, 596, 600, 601, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Azerbaijan mdhn:sourcePageReference "Vol. 1 printed pages 42, 57, 169, 204, 333, 369, 386, 393, 396, 397, 413, 415, 431, 435, 437, 490, 506, 513, 515, 516, 517, 523, 524, 525, 526, 527, 528, 530, 532, 534, 536, 542, 546, 548, 554, 556, 576, 577, 578, 579, 581, 583, 593, 600, 601, 607, 612, 622, 625, 630, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Baku mdhn:sourcePageReference "Vol. 1 printed pages 27, 28, 32, 56, 59, 61, 62, 65, 66, 67, 71, 72, 186, 187, 208, 359, 366, 373, 374, 466, 527, 617, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Bushire mdhn:sourcePageReference "Vol. 1 printed pages 8, 27, 46, 47, 130, 437, 443, 466, 467, 474, 479, 488, 490, 510, 524, 600, 616, 617, 629, 630, 631, 635, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:CaspianSea mdhn:sourcePageReference "Vol. 1 printed pages 25, 179, 186, 244, 372, 386, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Enzeli mdhn:sourcePageReference "Vol. 1 printed pages 27, 28, 31, 183, 353, 360, 370, 375, 381, 385, 467, 472, 600, 620, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Fars mdhn:sourcePageReference "Vol. 1 printed pages 416, 429, 431, 437, 439, 485, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:HoutumSchindler mdhn:sourcePageReference "Vol. 1 printed pages 266, 344, 517, 521; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Gilan mdhn:sourcePageReference "Vol. 1 printed pages 29, 186, 203, 353, 355, 358, 360, 361, 363, 364, 365, 366, 367, 368, 369, 370, 372, 374, 375, 376, 383, 384, 385, 386, 387, 388, 429, 437, 485, 593, 600, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:OfficeGovernorKhorasan mdhn:sourcePageReference "Vol. 1 printed pages 88, 101, 112, 160, 163, 168, 258, 423, 431, 612; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:GovernorOfHamadan mdhn:sourcePageReference "Vol. 1 printed pages 423; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Hamadan mdhn:sourcePageReference "Vol. 1 printed pages 51, 52, 348, 423, 437, 467, 472, 488, 490, 500, 506, 510, 513, 528, 537, 558, 566, 567, 568, 570, 585, 593, 601, 603, 607, 608, 630, 631, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Herat mdhn:sourcePageReference "Vol. 1 printed pages 8, 46, 76, 80, 90, 101, 106, 115, 161, 173, 175, 180, 187, 188, 197, 198, 201, 203, 210, 217, 222, 226, 229, 230, 234, 236, 240, 241, 242, 282, 288, 291, 353, 422, 513, 525, 582, 584, 607, 626, 627, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Isfahan mdhn:sourcePageReference "Vol. 1 printed pages 9, 18, 20, 27, 35, 36, 37, 46, 47, 56, 97, 175, 246, 283, 295, 308, 309, 321, 330, 332, 333, 336, 340, 369, 372, 373, 376, 377, 380, 388, 403, 406, 416, 418, 420, 431, 437, 468, 470, 472, 474, 479, 489, 496, 500, 505, 506, 507, 510, 511, 513, 546, 558, 570, 575, 593, 600, 601, 602, 629, 630, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Isfahan mdhn:sourcePageReference "Vol. 1 printed pages 520, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:KarunRiver mdhn:sourcePageReference "Vol. 1 printed pages 47; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Kazvin mdhn:sourcePageReference "Vol. 1 printed pages 31, 32, 35, 36, 37, 38, 39, 41, 42, 289, 387, 422, 431, 437, 466, 467, 486, 488, 528, 570, 593, 600, 601, 619, 625, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Kerman mdhn:sourcePageReference "Vol. 1 printed pages 46, 178, 199, 208, 210, 211, 212, 215, 222, 228, 235, 244, 324, 333, 369, 375, 406, 437, 466, 468, 472, 488, 513, 528, 558, 582, 593, 600, 601, 628, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Khorasan mdhn:sourcePageReference "Vol. 1 printed pages 2, 8, 45, 52, 69, 78, 85, 87, 88, 90, 97, 99, 101, 102, 105, 111, 112, 120, 138, 142, 147, 150, 160, 163, 168, 169, 170, 171, 172, 173, 175, 179, 180, 181, 182, 188, 189, 190, 191, 192, 194, 196, 199, 201, 202, 203, 204, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 235, 236, 237, 244, 258, 262, 265, 269, 270, 275, 278, 279, 321, 336, 353, 356, 365, 368, 369, 375, 386, 392, 406, 422, 423, 431, 436, 437, 513, 516, 523, 524, 528, 554, 582, 600, 601, 602, 612, 622, 626, 627, 628, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Arabistan mdhn:sourcePageReference "Vol. 1 printed pages 583, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Kurdistan mdhn:sourcePageReference "Vol. 1 printed pages 416, 435, 437, 515, 516, 535, 549, 550, 553, 554, 556, 557, 558, 575, 601, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Luristan mdhn:sourcePageReference "Vol. 1 printed pages 416, 436, 437, 549, 557, 570, 583, 593, 600, 601, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Mashhad mdhn:sourcePageReference "Vol. 1 printed pages 149, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Mashhad mdhn:sourcePageReference "Vol. 1 printed pages 8, 35, 45, 46, 85, 88, 91, 93, 94, 101, 105, 109, 110, 111, 112, 114, 115, 120, 121, 123, 125, 129, 130, 131, 132, 136, 137, 138, 140, 141, 144, 146, 147, 149, 150, 151, 152, 153, 154, 155, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 173, 174, 175, 179, 181, 187, 188, 189, 192, 193, 195, 196, 198, 199, 201, 203, 204, 208, 209, 210, 211, 212, 215, 217, 218, 220, 221, 234, 235, 237, 244, 246, 247, 248, 255, 256, 257, 258, 259, 264, 266, 267, 272, 276, 278, 282, 283, 285, 288, 289, 291, 292, 298, 299, 302, 322, 329, 336, 357, 358, 359, 388, 395, 429, 437, 460, 466, 467, 472, 474, 479, 487, 488, 489, 510, 511, 513, 515, 518, 522, 528, 600, 608, 611, 620, 626, 627, 628, 631, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Mohammerah mdhn:sourcePageReference "Vol. 1 printed pages 468, 524, 569, 600, 620, 622, 630, 631, 635; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:NadirShah mdhn:sourcePageReference "Vol. 1 printed pages 6, 20, 98, 109, 110, 115, 128, 133, 135, 136, 146, 150, 156, 157, 158, 162, 165, 192, 193, 204, 229, 263, 271, 279, 288, 308, 317, 320, 321, 357, 370, 375, 377, 405, 435, 453, 471, 505, 512, 558, 572, 575, 576, 593, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Persepolis mdhn:sourcePageReference "Vol. 1 printed pages 10, 19, 312, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:PersianGulf mdhn:sourcePageReference "Vol. 1 printed pages 7, 8, 25, 27, 46, 47, 154, 204, 210, 236, 274, 366, 398, 489, 490, 516, 525, 614, 629, 630, 632, 635, 637, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Resht mdhn:sourcePageReference "Vol. 1 printed pages 27, 29, 31, 32, 34, 37, 39, 41, 44, 46, 93, 170, 296, 353, 362, 368, 374, 375, 376, 384, 385, 386, 387, 388, 437, 466, 467, 472, 474, 479, 487, 488, 506, 513, 516, 615, 616, 619, 620, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:RuknEdDowleh mdhn:sourcePageReference "Vol. 1 printed pages 163, 168, 204, 395, 423, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Seistan mdhn:sourcePageReference "Vol. 1 printed pages 8, 175, 200, 201, 202, 203, 204, 216, 217, 218, 222, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 241, 242, 243, 244, 265, 276, 372, 375, 406, 437, 472, 602, 628, 629, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:SheikhUbeidullah mdhn:sourcePageReference "Vol. 1 printed pages 536, 553; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Shiraz mdhn:sourcePageReference "Vol. 1 printed pages 9, 20, 35, 46, 47, 56, 228, 246, 308, 313, 330, 333, 336, 416, 417, 420, 431, 437, 466, 474, 479, 488, 490, 505, 506, 508, 510, 511, 513, 527, 583, 591, 593, 601, 629, 631, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:HenryRawlinson mdhn:sourcePageReference "Vol. 1 printed pages 552; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Seistan mdhn:sourcePageReference "Vol. 1 printed pages 238, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Tabriz mdhn:sourcePageReference "Vol. 1 printed pages 35, 37, 39, 40, 41, 42, 43, 100, 208, 209, 210, 215, 330, 336, 393, 395, 396, 397, 413, 415, 431, 437, 454, 466, 467, 471, 472, 474, 478, 479, 487, 488, 490, 496, 506, 515, 516, 517, 518, 519, 520, 521, 522, 525, 526, 528, 530, 531, 532, 534, 537, 542, 548, 554, 556, 558, 568, 570, 576, 578, 600, 601, 615, 625, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Tabriz mdhn:sourcePageReference "Vol. 1 printed pages 513, 519, 520; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Tehran mdhn:sourcePageReference "Vol. 1 printed pages 8, 9, 21, 22, 25, 30, 31, 32, 35, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 51, 54, 56, 57, 100, 101, 112, 131, 153, 165, 167, 168, 169, 175, 181, 182, 189, 190, 204, 208, 209, 215, 219, 231, 244, 246, 247, 248, 255, 256, 258, 266, 276, 278, 282, 285, 289, 291, 293, 294, 297, 298, 299, 301, 302, 303, 304, 305, 306, 307, 308, 310, 311, 313, 317, 318, 320, 321, 322, 325, 327, 328, 330, 331, 332, 333, 334, 335, 336, 337, 338, 340, 342, 343, 344, 345, 347, 350, 352, 353, 356, 380, 382, 383, 388, 393, 396, 398, 400, 406, 407, 410, 412, 413, 416, 418, 420, 422, 423, 426, 428, 429, 430, 431, 437, 454, 458, 460, 461, 465, 466, 467, 468, 469, 471, 472, 473, 474, 477, 479, 480, 483, 485, 486, 487, 488, 489, 490, 494, 496, 500, 501, 506, 507, 510, 512, 513, 525, 528, 531, 537, 542, 550, 554, 556, 557, 558, 559, 572, 576, 578, 583, 585, 586, 587, 588, 589, 593, 595, 600, 601, 602, 604, 607, 608, 609, 614, 615, 616, 617, 618, 619, 620, 622, 623, 625, 626, 628, 629, 630, 631, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Tiflis mdhn:sourcePageReference "Vol. 1 printed pages 27, 40, 54, 61, 63, 64, 65, 66, 84, 466, 527, 615, 625, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-mdhn_data:Tehran mdhn:sourcePageReference "Vol. 1 printed pages 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
-# END generated exact-label page references
+mdhn_data:CaspianSea a mdhn:SpatialEntity ;
+    rdfs:label "Caspian Sea"@en ;
+    rdfs:comment "Northern maritime frontier; Russian monopoly of access, ports at Enzeli/Resht."@en ;
+    owl:sameAs wd:Q5484 ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 25, 179, 186, 244, 372, 386, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:Ch_IsfahanShiraz a mdhn:PrimarySourceBook ;
+    rdfs:label "Isfahan to Shiraz and Fars chapters (Vol. 2)"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol2 .
+
+mdhn_data:CurzonTravelEvent a mdhn:RevolutionaryEvent ;
+    rdfs:label "George N. Curzon's Journey through Persia"@en ;
+    rdfs:comment "Extensive travels documenting geography, politics, trade, and the Russian threat; basis of the two volumes."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:hasTemporalAnchor mdhn_data:CurzonJourney1889 ;
+    mdhn:initiatedBy mdhn_data:GeorgeNathanielCurzon ;
+    mdhn:occurredAt mdhn_data:Isfahan,
+        mdhn_data:Mashhad,
+        mdhn_data:Tabriz,
+        mdhn_data:Tehran .
+
+mdhn_data:Hamadan a mdhn:City ;
+    rdfs:label "Hamadan"@en ;
+    rdfs:comment "Western city on Baghdad-Tehran route; historical Ecbatana associations."@en ;
+    owl:sameAs wd:Q168865 ;
+    skos:altLabel "همدان"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 51, 52, 348, 423, 437, 467, 472, 488, 490, 500, 506, 510, 513, 528, 537, 558, 566, 567, 568, 570, 585, 593, 601, 603, 607, 608, 630, 631, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:IsfahanDescriptionEvent a mdhn:RevolutionaryEvent ;
+    rdfs:label "Curzon's Description of Isfahan and its Monuments"@en ;
+    rdfs:comment "Detailed account of the former Safavid capital, bridges, palaces, and current state (Vol. 2)."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol2 ;
+    mdhn:occurredAt mdhn_data:Isfahan .
+
+mdhn_data:Kurdistan a mdhn:SpatialEntity ;
+    rdfs:label "Kurdistan"@en ;
+    rdfs:comment "Western frontier region inhabited by Kurdish tribes; scene of Sheikh Ubeidullah’s revolt and ongoing border issues with the Ottoman Empire."@en ;
+    skos:altLabel "کردستان"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 416, 435, 437, 515, 516, 535, 549, 550, 553, 554, 556, 557, 558, 575, 601, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:Mohammerah a mdhn:City ;
+    rdfs:label "Mohammerah"@en ;
+    rdfs:comment "Southern port at the head of the Karun; proposed railway starting point superior to Bushire."@en ;
+    skos:altLabel "Khorramshahr"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 468, 524, 569, 600, 620, 622, 630, 631, 635; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:Resht a mdhn:City ;
+    rdfs:label "Resht"@en ;
+    rdfs:comment "Caspian port and Gilan capital; key entry point from Russia."@en,
+        "Principal town and port of Gilan on the Caspian. Main northern gateway for Russian trade and the preferred starting point for any northern railway into Persia according to Curzon's analysis."@en ;
+    owl:sameAs wd:Q173270 ;
+    skos:altLabel "Rasht"@en,
+        "Resht"@en,
+        "رشت"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:hasPopulationEstimate "Principal Caspian commercial town" ;
+    mdhn:identificationStatus "named" ;
+    mdhn:locatedIn mdhn_data:Gilan ;
+    mdhn:partOf mdhn_data:Gilan ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 27, 29, 31, 32, 34, 37, 39, 41, 44, 46, 93, 170, 296, 353, 362, 368, 374, 375, 376, 384, 385, 386, 387, 388, 437, 466, 467, 472, 474, 479, 487, 488, 506, 513, 516, 615, 616, 619, 620, 626, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:ReuterConcession1872 a mdhn:TemporalEntity ;
+    rdfs:label "Reuter Concession 1872"@en ;
+    rdfs:comment "Date of the notorious comprehensive concession later cancelled."@en ;
+    mdhn:gregorianDate "1872-07-25"^^xsd:date .
+
+mdhn_data:RussianEconomicDominance a mdhn:DiplomaticCrisis ;
+    rdfs:label "Russian Commercial and Economic Dominance in the North"@en ;
+    rdfs:comment "Russian monopoly of Caspian trade, control of the northern markets (Tabriz, Resht, Meshed), and the impact of the Transcaspian Railway on Persian commerce and politics."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:occurredAt mdhn_data:CaspianSea,
+        mdhn_data:Mashhad,
+        mdhn_data:Resht,
+        mdhn_data:Tabriz .
+
+mdhn_data:Shiraz a mdhn:City ;
+    rdfs:label "Shiraz"@en ;
+    rdfs:comment "Southern city; discussed in context of trade routes and caravan roads from the Gulf."@en ;
+    owl:sameAs wd:Q639706 ;
+    skos:altLabel "شیراز"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:partOf mdhn_data:Fars ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 9, 20, 35, 46, 47, 56, 228, 246, 308, 313, 330, 333, 336, 416, 417, 420, 431, 437, 466, 474, 479, 488, 490, 505, 506, 508, 510, 511, 513, 527, 583, 591, 593, 601, 629, 631, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:SocialConditionsProvinces a mdhn:RevolutionaryEvent ;
+    rdfs:label "Social and Administrative Conditions in the Provinces"@en ;
+    rdfs:comment "Observations on local governance, revenue extraction, the power of provincial governors, tribal groups, urban life, and the contrast between central authority and provincial realities."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+mdhn_data:KarunRiver a mdhn:SpatialEntity ;
+    rdfs:label "Karun River"@en ;
+    rdfs:comment "Navigable river; British trade concession and potential railway corridor from the Gulf."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 47; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:PersianGulf a mdhn:SpatialEntity ;
+    rdfs:label "Persian Gulf"@en ;
+    rdfs:comment "Southern maritime frontier; trade, strategic access, and proposed railway termini (Bushire, Mohammerah, etc.)."@en ;
+    owl:sameAs wd:Q34675 ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 7, 8, 25, 27, 46, 47, 154, 204, 210, 236, 274, 366, 398, 489, 490, 516, 525, 614, 629, 630, 632, 635, 637, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:QajarCourtPolitics a mdhn:PoliticalTransition ;
+    rdfs:label "Qajar Court Politics and Factionalism"@en ;
+    rdfs:comment "Description of the central court, the power of the Shah, the role of the Grand Vizier (Amin al-Sultan), provincial princes (Zell-e Soltan), and the distribution of offices and revenues."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:occurredAt mdhn_data:GolestanPalace,
+        mdhn_data:Tehran .
+
+mdhn_data:TranscaspianRailwayImpact a mdhn:DiplomaticCrisis ;
+    rdfs:label "Impact of the Transcaspian Railway"@en ;
+    rdfs:comment "Russian railway construction altering strategic balance in Khorasan and Central Asia."@en ;
+    mdhn:describedInBook mdhn_data:Ch_ForeignPolicy,
+        mdhn_data:Ch_Khorasan,
+        mdhn_data:CurzonVol1 ;
+    mdhn:occurredAt mdhn_data:Ashkabad,
+        mdhn_data:Mashhad .
+
+mdhn_data:BritishTradeSouth a mdhn:RevolutionaryEvent ;
+    rdfs:label "British Trade and Political Interests in the South and Gulf"@en ;
+    rdfs:comment "British commercial activity via the Persian Gulf, Bushire, Mohammerah and the Karun River; the Resident's position; and competition with Russian influence."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:occurredAt mdhn_data:Bushire,
+        mdhn_data:KarunRiver,
+        mdhn_data:Mohammerah,
+        mdhn_data:PersianGulf .
+
+mdhn_data:Bushire a mdhn:City ;
+    rdfs:label "Bushire"@en ;
+    rdfs:comment "Principal southern port; terminus of proposed railway and trade routes."@en ;
+    owl:sameAs wd:Q155400 ;
+    skos:altLabel "Bandar Bushehr"@en,
+        "Bushehr"@en,
+        "بوشهر"@fa ;
+    mdhn:describedInBook mdhn_data:Ch_GulfTrade,
+        mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 8, 27, 46, 47, 130, 437, 443, 466, 467, 474, 479, 488, 490, 510, 524, 600, 616, 617, 629, 630, 631, 635, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:Ch_ForeignPolicy a mdhn:PrimarySourceBook ;
+    rdfs:label "Foreign Policy, Anglo-Russian Rivalry, Railways"@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+mdhn_data:GeorgeNathanielCurzon a mdhn:IntellectualOrator ;
+    rdfs:label "George Nathaniel Curzon, 1st Marquess Curzon of Kedleston"@en ;
+    rdfs:comment "Author of the two volumes; travelled in Persia 1889–1890 as Times correspondent."@en ;
+    owl:sameAs lcnaf:n50019619,
+        wd:Q271878 ;
+    skos:altLabel "Hon. George N. Curzon"@en,
+        "Lord Curzon"@en,
+        "جرج ناتانیل کرزن"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:identificationStatus "named" ;
+    mdhn:metWith mdhn_data:RuknEdDowleh ;
+    mdhn:participatedIn mdhn_data:AntiquitiesFarsEvent,
+        mdhn_data:CurzonTravelEvent,
+        mdhn_data:IsfahanDescriptionEvent .
+
+mdhn_data:Fars a mdhn:SpatialEntity ;
+    rdfs:label "Fars"@en ;
+    rdfs:comment "Southern province; Shiraz as capital, antiquity sites."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol2 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 416, 429, 431, 437, 439, 485, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:Khorasan a mdhn:SpatialEntity ;
+    rdfs:label "Khorasan"@en ;
+    rdfs:comment "Northeastern province; Meshed as capital, pilgrimage, Russian threat, grain."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 2, 8, 45, 52, 69, 78, 85, 87, 88, 90, 97, 99, 101, 102, 105, 111, 112, 120, 138, 142, 147, 150, 160, 163, 168, 169, 170, 171, 172, 173, 175, 179, 180, 181, 182, 188, 189, 190, 191, 192, 194, 196, 199, 201, 202, 203, 204, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 235, 236, 237, 244, 258, 262, 265, 269, 270, 275, 278, 279, 321, 336, 353, 356, 365, 368, 369, 375, 386, 392, 406, 422, 423, 431, 436, 437, 513, 516, 523, 524, 528, 554, 582, 600, 601, 602, 612, 622, 626, 627, 628, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:Mashhad rdfs:comment "Capital of Khorasan and one of the holiest Shia cities in Persia (shrine of Imam Reza). Major pilgrimage centre, commercial hub for the northeast, and strategic point facing the Transcaspian Railway and Russian Central Asia. Curzon provides a detailed description of the city, shrine, administration under Rukn-ed-Dowleh, and the political atmosphere."@en ;
+    skos:altLabel "Mashhad"@en,
+        "Meshed"@en,
+        "مشهد"@fa ;
+    mdhn:describedInBook mdhn_data:Ch_Khorasan ;
+    mdhn:hasPopulationEstimate "c. 60,000–80,000 (including pilgrims seasonally higher)" ;
+    mdhn:hasRevenueEstimate "Significant pilgrimage and trade revenues; provincial surplus discussed" ;
+    mdhn:identificationStatus "named" ;
+    mdhn:partOf mdhn_data:Khorasan ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 149, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan.",
+        "Vol. 1 printed pages 8, 35, 45, 46, 85, 88, 91, 93, 94, 101, 105, 109, 110, 111, 112, 114, 115, 120, 121, 123, 125, 129, 130, 131, 132, 136, 137, 138, 140, 141, 144, 146, 147, 149, 150, 151, 152, 153, 154, 155, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 173, 174, 175, 179, 181, 187, 188, 189, 192, 193, 195, 196, 198, 199, 201, 203, 204, 208, 209, 210, 211, 212, 215, 217, 218, 220, 221, 234, 235, 237, 244, 246, 247, 248, 255, 256, 257, 258, 259, 264, 266, 267, 272, 276, 278, 282, 283, 285, 288, 289, 291, 292, 298, 299, 302, 322, 329, 336, 357, 358, 359, 388, 395, 429, 437, 460, 466, 467, 472, 474, 479, 487, 488, 489, 510, 511, 513, 515, 518, 522, 528, 600, 608, 611, 620, 626, 627, 628, 631, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:NaserAlDinShah a mdhn:Monarch ;
+    rdfs:label "Naser al-Din Shah Qajar"@en ;
+    rdfs:comment "Shah of Qajar Iran 1848–1896; central figure in Curzon's account of contemporary Persia."@en ;
+    owl:sameAs wd:Q159416 ;
+    skos:altLabel "Nasir al-Din Shah"@en,
+        "Nāṣer al-Dīn Shāh"@en,
+        "ناصرالدین شاه قاجار"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:participatedIn mdhn_data:GreatGameCompetition,
+        mdhn_data:QajarCourtPolitics,
+        mdhn_data:ReuterConcessionEvent,
+        mdhn_data:TobaccoConcessionEvent ;
+    mdhn:signedDocument mdhn_data:ReuterConcessionDoc ;
+    mdhn:sourcePageReference "Frequent mentions as the reigning Shah throughout both volumes" .
+
+mdhn_data:Tabriz a mdhn:City ;
+    rdfs:label "Tabriz"@en ;
+    rdfs:comment "Major commercial city of Azerbaijan; key distribution centre for Russian and European goods."@en ;
+    owl:sameAs wd:Q15657 ;
+    skos:altLabel "Tauris"@en,
+        "تبریز"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:hasPopulationEstimate "c. 150,000–200,000 (major commercial centre)" ;
+    mdhn:identificationStatus "named" ;
+    mdhn:partOf mdhn_data:Azerbaijan ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 35, 37, 39, 40, 41, 42, 43, 100, 208, 209, 210, 215, 330, 336, 393, 395, 396, 397, 413, 415, 431, 437, 454, 466, 467, 471, 472, 474, 478, 479, 487, 488, 490, 496, 506, 515, 516, 517, 518, 519, 520, 521, 522, 525, 526, 528, 530, 531, 532, 534, 537, 542, 548, 554, 556, 558, 568, 570, 576, 578, 600, 601, 615, 625, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan.",
+        "Vol. 1 printed pages 513, 519, 520; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:Tehran a mdhn:City ;
+    rdfs:label "Tehran"@en ;
+    rdfs:comment "Capital of Persia; extensively described as the political and commercial centre."@en ;
+    owl:sameAs wd:Q3616 ;
+    skos:altLabel "Teheran"@en,
+        "Ṭihrān"@en,
+        "تهران"@fa ;
+    mdhn:describedInBook mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:hasPopulationEstimate "c. 150,000–200,000" ;
+    mdhn:identificationStatus "named" ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan.",
+        "Vol. 1 printed pages 8, 9, 21, 22, 25, 30, 31, 32, 35, 37, 38, 39, 41, 42, 43, 44, 45, 46, 47, 51, 54, 56, 57, 100, 101, 112, 131, 153, 165, 167, 168, 169, 175, 181, 182, 189, 190, 204, 208, 209, 215, 219, 231, 244, 246, 247, 248, 255, 256, 258, 266, 276, 278, 282, 285, 289, 291, 293, 294, 297, 298, 299, 301, 302, 303, 304, 305, 306, 307, 308, 310, 311, 313, 317, 318, 320, 321, 322, 325, 327, 328, 330, 331, 332, 333, 334, 335, 336, 337, 338, 340, 342, 343, 344, 345, 347, 350, 352, 353, 356, 380, 382, 383, 388, 393, 396, 398, 400, 406, 407, 410, 412, 413, 416, 418, 420, 422, 423, 426, 428, 429, 430, 431, 437, 454, 458, 460, 461, 465, 466, 467, 468, 469, 471, 472, 473, 474, 477, 479, 480, 483, 485, 486, 487, 488, 489, 490, 494, 496, 500, 501, 506, 507, 510, 512, 513, 525, 528, 531, 537, 542, 550, 554, 556, 557, 558, 559, 572, 576, 578, 583, 585, 586, 587, 588, 589, 593, 595, 600, 601, 602, 604, 607, 608, 609, 614, 615, 616, 617, 618, 619, 620, 622, 623, 625, 626, 628, 629, 630, 631, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:Gilan a mdhn:SpatialEntity ;
+    rdfs:label "Gilan"@en ;
+    rdfs:comment "Caspian province; Resht as capital, silk and trade with Russia."@en ;
+    mdhn:describedInBook mdhn_data:CurzonVol1 ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 29, 186, 203, 353, 355, 358, 360, 361, 363, 364, 365, 366, 367, 368, 369, 370, 372, 374, 375, 376, 383, 384, 385, 386, 387, 388, 429, 437, 485, 593, 600, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:GreatGameCompetition a mdhn:DiplomaticCrisis ;
+    rdfs:label "Anglo-Russian Competition in Persia (Great Game)"@en ;
+    rdfs:comment "Overarching theme of both volumes: British vs Russian influence via trade, railways, and political pressure."@en ;
+    mdhn:describedInBook mdhn_data:Ch_ForeignPolicy,
+        mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 .
+
+mdhn_data:Isfahan a mdhn:City ;
+    rdfs:label "Isfahan"@en ;
+    rdfs:comment "Former Safavid capital. Curzon devotes substantial attention to its monuments (Si-o-se-pol, Khaju Bridge, Chehel Sotoun, etc.), its reduced political and economic status under Zell-e Soltan, and its role in central and southern Persia."@en,
+        "Historic Safavid capital; described for its architecture, industry, and position on routes."@en ;
+    owl:sameAs wd:Q42053 ;
+    skos:altLabel "Esfahan"@en,
+        "Isfahan"@en,
+        "Ispahan"@en,
+        "اصفهان"@fa ;
+    mdhn:describedInBook mdhn_data:Ch_IsfahanShiraz,
+        mdhn_data:CurzonVol1,
+        mdhn_data:CurzonVol2 ;
+    mdhn:hasPopulationEstimate "Greatly reduced from Safavid peak; c. 50,000–80,000 range in Curzon’s time" ;
+    mdhn:identificationStatus "named" ;
+    mdhn:partOf mdhn_data:Fars ;
+    mdhn:sourcePageReference "Vol. 1 printed pages 520, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan.",
+        "Vol. 1 printed pages 9, 18, 20, 27, 35, 36, 37, 46, 47, 56, 97, 175, 246, 283, 295, 308, 309, 321, 330, 332, 333, 336, 340, 369, 372, 373, 376, 377, 380, 388, 403, 406, 416, 418, 420, 431, 437, 468, 470, 472, 474, 479, 489, 496, 500, 505, 506, 507, 510, 511, 513, 546, 558, 570, 575, 593, 600, 601, 602, 629, 630, 636, 639; exact label occurrence in the page-marked Frank Cass 1966 transcription; lexical evidence only, verify the claim against the 1892 scan." .
+
+mdhn_data:CurzonVol2 a mdhn:PrimarySourceBook ;
+    rdfs:label "Persia and the Persian Question, Volume 2"@en ;
+    dcterms:creator mdhn_data:GeorgeNathanielCurzon ;
+    dcterms:issued "1892"^^xsd:gYear .
+
+mdhn_data:CurzonVol1 a mdhn:PrimarySourceBook ;
+    rdfs:label "Persia and the Persian Question, Volume 1"@en ;
+    dcterms:creator mdhn_data:GeorgeNathanielCurzon ;
+    dcterms:issued "1892"^^xsd:gYear ;
+    rdfs:comment "Extracted and purified from Internet Archive OCR of George N. Curzon's 1892 work."@en,
+        "Some page references were matched against the page-marked Frank Cass 1966 second impression; verify them against the 1892 scan."@en .
+
